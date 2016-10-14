@@ -4,9 +4,9 @@
   <subtitle>Talk is cheap show me the offer!</subtitle>
   <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="http://buptsteve.github.io/blog/"/>
+  <link href="https://buptsteve.github.io/blog/"/>
   <updated>2016-10-14T02:56:45.394Z</updated>
-  <id>http://buptsteve.github.io/blog/</id>
+  <id>https://buptsteve.github.io/blog/</id>
   
   <author>
     <name>Steve Young</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>「6」JavaScript 函数表达式学习笔记</title>
-    <link href="http://buptsteve.github.io/blog/2016/03/23/6.%20js-function-chapter7/"/>
-    <id>http://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/</id>
+    <link href="https://buptsteve.github.io/blog/2016/03/23/6.%20js-function-chapter7/"/>
+    <id>https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/</id>
     <published>2016-03-23T07:27:58.000Z</published>
     <updated>2016-10-14T02:56:45.394Z</updated>
     
@@ -190,17 +190,17 @@
     
     </summary>
     
-      <category term="全栈" scheme="http://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
+      <category term="全栈" scheme="https://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
     
     
-      <category term="JavaScript" scheme="http://buptsteve.github.io/blog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://buptsteve.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>「5」JavaScript 面向对象深入理解</title>
-    <link href="http://buptsteve.github.io/blog/2016/03/17/5.%20js-oo-chapter6/"/>
-    <id>http://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/</id>
+    <link href="https://buptsteve.github.io/blog/2016/03/17/5.%20js-oo-chapter6/"/>
+    <id>https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/</id>
     <published>2016-03-17T08:27:58.000Z</published>
     <updated>2016-10-14T02:56:45.393Z</updated>
     
@@ -423,17 +423,17 @@
     
     </summary>
     
-      <category term="全栈" scheme="http://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
+      <category term="全栈" scheme="https://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
     
     
-      <category term="JavaScript" scheme="http://buptsteve.github.io/blog/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://buptsteve.github.io/blog/tags/JavaScript/"/>
     
   </entry>
   
   <entry>
     <title>「4」Byrs-News 建站笔记（一）</title>
-    <link href="http://buptsteve.github.io/blog/2016/03/16/4.%20byrs-news%20notes%201/"/>
-    <id>http://buptsteve.github.io/blog/2016/03/16/4. byrs-news notes 1/</id>
+    <link href="https://buptsteve.github.io/blog/2016/03/16/4.%20byrs-news%20notes%201/"/>
+    <id>https://buptsteve.github.io/blog/2016/03/16/4. byrs-news notes 1/</id>
     <published>2016-03-16T03:27:58.000Z</published>
     <updated>2016-10-14T02:56:45.392Z</updated>
     
@@ -506,17 +506,17 @@
     
     </summary>
     
-      <category term="全栈" scheme="http://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
+      <category term="全栈" scheme="https://buptsteve.github.io/blog/categories/%E5%85%A8%E6%A0%88/"/>
     
     
-      <category term="meteor" scheme="http://buptsteve.github.io/blog/tags/meteor/"/>
+      <category term="meteor" scheme="https://buptsteve.github.io/blog/tags/meteor/"/>
     
   </entry>
   
   <entry>
     <title>「3」前端开发利器 webpack</title>
-    <link href="http://buptsteve.github.io/blog/2015/12/29/3.%20js-webpack/"/>
-    <id>http://buptsteve.github.io/blog/2015/12/29/3. js-webpack/</id>
+    <link href="https://buptsteve.github.io/blog/2015/12/29/3.%20js-webpack/"/>
+    <id>https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/</id>
     <published>2015-12-29T07:12:58.000Z</published>
     <updated>2016-10-14T02:56:45.392Z</updated>
     
@@ -621,19 +621,19 @@
     
     </summary>
     
-      <category term="前端" scheme="http://buptsteve.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://buptsteve.github.io/blog/categories/%E5%89%8D%E7%AB%AF/"/>
     
     
-      <category term="效率" scheme="http://buptsteve.github.io/blog/tags/%E6%95%88%E7%8E%87/"/>
+      <category term="webpack" scheme="https://buptsteve.github.io/blog/tags/webpack/"/>
     
-      <category term="webpack" scheme="http://buptsteve.github.io/blog/tags/webpack/"/>
+      <category term="效率" scheme="https://buptsteve.github.io/blog/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>「2」如何搭建自己的服务器？</title>
-    <link href="http://buptsteve.github.io/blog/2015/11/03/2.%20centos-server/"/>
-    <id>http://buptsteve.github.io/blog/2015/11/03/2. centos-server/</id>
+    <link href="https://buptsteve.github.io/blog/2015/11/03/2.%20centos-server/"/>
+    <id>https://buptsteve.github.io/blog/2015/11/03/2. centos-server/</id>
     <published>2015-11-03T05:04:58.000Z</published>
     <updated>2015-12-29T02:36:58.000Z</updated>
     
@@ -704,25 +704,25 @@
     
     </summary>
     
-      <category term="后端" scheme="http://buptsteve.github.io/blog/categories/%E5%90%8E%E7%AB%AF/"/>
+      <category term="后端" scheme="https://buptsteve.github.io/blog/categories/%E5%90%8E%E7%AB%AF/"/>
     
     
-      <category term="Linux" scheme="http://buptsteve.github.io/blog/tags/Linux/"/>
+      <category term="Linux" scheme="https://buptsteve.github.io/blog/tags/Linux/"/>
     
-      <category term="Server" scheme="http://buptsteve.github.io/blog/tags/Server/"/>
+      <category term="Server" scheme="https://buptsteve.github.io/blog/tags/Server/"/>
     
-      <category term="Python" scheme="http://buptsteve.github.io/blog/tags/Python/"/>
+      <category term="Python" scheme="https://buptsteve.github.io/blog/tags/Python/"/>
     
-      <category term="Node.js" scheme="http://buptsteve.github.io/blog/tags/Node-js/"/>
+      <category term="Node.js" scheme="https://buptsteve.github.io/blog/tags/Node-js/"/>
     
   </entry>
   
   <entry>
     <title>「1」优雅地打开软件是怎样的体验？</title>
-    <link href="http://buptsteve.github.io/blog/2015/11/01/1.%20the-way-to-open-software/"/>
-    <id>http://buptsteve.github.io/blog/2015/11/01/1. the-way-to-open-software/</id>
+    <link href="https://buptsteve.github.io/blog/2015/11/01/1.%20the-way-to-open-software/"/>
+    <id>https://buptsteve.github.io/blog/2015/11/01/1. the-way-to-open-software/</id>
     <published>2015-11-01T11:04:58.000Z</published>
-    <updated>2016-10-14T02:56:45.390Z</updated>
+    <updated>2016-10-14T09:03:34.642Z</updated>
     
     <content type="html"><![CDATA[<h2 id="零、问题的由来"><a href="#零、问题的由来" class="headerlink" title="零、问题的由来"></a>零、问题的由来</h2><p>不知道大家平时是怎么打开常用软件的：</p>
 <h3 id="1-windows-用户："><a href="#1-windows-用户：" class="headerlink" title="1. windows 用户："></a>1. windows 用户：</h3><ul>
@@ -776,60 +776,62 @@
     
     </summary>
     
-      <category term="工欲善其事" scheme="http://buptsteve.github.io/blog/categories/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B/"/>
+      <category term="工欲善其事" scheme="https://buptsteve.github.io/blog/categories/%E5%B7%A5%E6%AC%B2%E5%96%84%E5%85%B6%E4%BA%8B/"/>
     
     
-      <category term="效率" scheme="http://buptsteve.github.io/blog/tags/%E6%95%88%E7%8E%87/"/>
+      <category term="效率" scheme="https://buptsteve.github.io/blog/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
   <entry>
     <title>「0」Hello World</title>
-    <link href="http://buptsteve.github.io/blog/2015/10/29/0.%20hello-world/"/>
-    <id>http://buptsteve.github.io/blog/2015/10/29/0. hello-world/</id>
+    <link href="https://buptsteve.github.io/blog/2015/10/29/0.%20hello-world/"/>
+    <id>https://buptsteve.github.io/blog/2015/10/29/0. hello-world/</id>
     <published>2015-10-29T11:04:58.000Z</published>
-    <updated>2016-10-14T06:55:31.211Z</updated>
+    <updated>2016-10-14T09:43:26.524Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="零、Blog的由来"><a href="#零、Blog的由来" class="headerlink" title="零、Blog的由来"></a>零、Blog的由来</h2><p>作为一个学计算机的，一直想整个自己的Blog =￣ω￣=，尤其是最近在搞前端。<br>先是看到<a href="http://jekyllcn.com/" target="_blank" rel="external">jekyll</a>感觉不错，折腾了半天感觉还是不够给力。<br>最后还是选择了<a href="https://hexo.io/" target="_blank" rel="external">hexo3</a>。</p>
+    <content type="html"><![CDATA[<h2 id="零、Blog的由来"><a href="#零、Blog的由来" class="headerlink" title="零、Blog的由来"></a>零、Blog的由来</h2><p>作为一个学计算机的，一直想整个自己的 Blog，尤其是最近在搞前端。先是看到 <a href="http://jekyllcn.com/" target="_blank" rel="external">jekyll</a> 感觉不错，折腾了半天感觉还是不够给力。<br>最后还是选择了 <a href="https://hexo.io/" target="_blank" rel="external">hexo3</a>。</p>
 <a id="more"></a>
 <p>主要是这几个优点吧：</p>
 <ul>
 <li>免费╮(╯▽╰)╭</li>
-<li>基于 node.js</li>
+<li>基于 Node.js</li>
 <li>速度快、操作更简单、命令少，专注于写作本身</li>
 <li>由于 deploy 命令，发布到 github 上生成静态站点也很简单</li>
 </ul>
-<p>所以整个Blog就是采用<a href="https://hexo.io/" target="_blank" rel="external">hexo3</a> + <a href="https://pages.github.com/" target="_blank" rel="external">github pages</a>,对了，主题准备基于<a href="https://github.com/huangjunhui/concise" target="_blank" rel="external">concise</a>进行修改，下面就详细说说怎么搭起来吧…</p>
-<h2 id="一、hexo的安装"><a href="#一、hexo的安装" class="headerlink" title="一、hexo的安装"></a>一、hexo的安装</h2><p>首先由于 hexo 是基于 node.js 开发的，所以我们先要安装 node.js 环境，进入<a href="https://nodejs.org/en/" target="_blank" rel="external">node.js官网</a>，一般会发现有两个版本：LTS 和 Stable。</p>
+<p>所以整个 Blog 就是采用 <a href="https://hexo.io/" target="_blank" rel="external">hexo3</a> + <a href="https://pages.github.com/" target="_blank" rel="external">github pages</a>,主题基于 <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external">indigo</a> 进行修改，下面就详细说说怎么搭起来吧…</p>
+<h2 id="一、hexo的安装"><a href="#一、hexo的安装" class="headerlink" title="一、hexo的安装"></a>一、hexo的安装</h2><p>首先由于 hexo 是基于 Node.js 开发的，所以我们先要安装 Node.js 环境，进入<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a>，一般会发现有两个版本：LTS 和 Stable。</p>
 <p>这两个版本的区别在于一个是 LTS 长期支持版（也是推荐选项），另一个是拥有最新功能的稳定版（适合有新功能需求的尝鲜用户）。</p>
 <p>安装完成后，在命令行运行以下命令（其中括号的意思是 install 可以缩写为 i）：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) -g hexo</div></pre></td></tr></table></figure>
 <p><em>npm 安装方式中 -g 的意思是全局安装。</em></p>
-<h2 id="二、初体验-≧▽≦"><a href="#二、初体验-≧▽≦" class="headerlink" title="二、初体验~\(≧▽≦)/~"></a>二、初体验~\(≧▽≦)/~</h2><h3 id="2-1-找到一个合适的位置，创建我们的项目文件夹："><a href="#2-1-找到一个合适的位置，创建我们的项目文件夹：" class="headerlink" title="2.1. 找到一个合适的位置，创建我们的项目文件夹："></a>2.1. 找到一个合适的位置，创建我们的项目文件夹：</h3><ul>
+<h2 id="二、初体验"><a href="#二、初体验" class="headerlink" title="二、初体验~"></a>二、初体验~</h2><h3 id="2-1-生成项目"><a href="#2-1-生成项目" class="headerlink" title="2.1. 生成项目"></a>2.1. 生成项目</h3><p>找到一个合适的位置，创建我们的项目文件夹：</p>
+<ul>
 <li>一般的用户：自己图形界面新建了一个,然后点进去</li>
 <li>命令行用户：<code>mkdir &lt;folder&gt; &amp;&amp; cd &lt;folder&gt;</code></li>
 <li>hexo的用户：<code>hexo init &lt;folder&gt; &amp;&amp; cd &lt;folder&gt;</code></li>
 </ul>
 <h3 id="2-2-安装依赖"><a href="#2-2-安装依赖" class="headerlink" title="2.2. 安装依赖"></a>2.2. 安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall)</div></pre></td></tr></table></figure>
 <p>npm 就会自动根据 package.json 中的配置自动进行安装</p>
-<h3 id="2-3-运行"><a href="#2-3-运行" class="headerlink" title="2.3. 运行"></a>2.3. 运行</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g(enerate)</div><div class="line">$ hexo s(erver)</div></pre></td></tr></table></figure>
+<h3 id="2-3-运行预览"><a href="#2-3-运行预览" class="headerlink" title="2.3. 运行预览"></a>2.3. 运行预览</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo g(enerate)</div><div class="line">$ hexo s(erver)</div></pre></td></tr></table></figure>
 <p><em>如果这步报错一般是因为没装 hexo-server，运行以下命令安装即可：</em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) --save  hexo-server</div></pre></td></tr></table></figure>
 <blockquote>
-<p>npm 安装方式中 –save 的意思是作为项目依赖进行安装，可以缩写为 -S (注意大写)<br>此外还有 –save-dev 的意思是作为项目的「开发」依赖进行安装，可以缩写为 -D (注意大写)<br>这两种安装方式都会将这个包的名称和版本写进 package.json 配置文件中</p>
+<p>npm 安装方式中 –save 的意思是作为项目依赖(dependencies)进行安装，可以缩写为 -S (注意大写)<br>此外还有 –save-dev 的意思是作为项目的「开发」依赖(devDependencies)进行安装，可以缩写为 -D (注意大写)<br>这两种安装方式都会将这个包的名称和版本写进 package.json 配置文件中</p>
 </blockquote>
-<h3 id="2-4-最后打开浏览器输入http-localhost-4000就可以看到页面啦～-￣ω￣-～"><a href="#2-4-最后打开浏览器输入http-localhost-4000就可以看到页面啦～-￣ω￣-～" class="headerlink" title="2.4. 最后打开浏览器输入http://localhost:4000就可以看到页面啦～=￣ω￣=～"></a>2.4. 最后打开浏览器输入<code>http://localhost:4000</code>就可以看到页面啦～=￣ω￣=～</h3><h2 id="三、换主题（theme）"><a href="#三、换主题（theme）" class="headerlink" title="三、换主题（theme）"></a>三、换主题（theme）</h2><p>然而只是使用默认的主题（theme）怎么会有逼格→_→，果断要整一个吊炸天的主题呀~，我初步选了<a href="https://github.com/huangjunhui/concise" target="_blank" rel="external">concise</a>。</p>
-<h3 id="3-1-首先在项目目录下（就是说有个-themes-的文件夹），执行以下命令，将主题下载到-themes-文件夹下的-concise-文件夹中。"><a href="#3-1-首先在项目目录下（就是说有个-themes-的文件夹），执行以下命令，将主题下载到-themes-文件夹下的-concise-文件夹中。" class="headerlink" title="3.1. 首先在项目目录下（就是说有个 themes 的文件夹），执行以下命令，将主题下载到 themes 文件夹下的 concise 文件夹中。"></a>3.1. 首先在项目目录下（就是说有个 themes 的文件夹），执行以下命令，将主题下载到 themes 文件夹下的 concise 文件夹中。</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/huangjunhui/concise themes/concise</div></pre></td></tr></table></figure>
-<h3 id="3-2-接着修改-config-yml（项目的配置文件，不是主题的）-将-theme-改为-concise（主题的文件夹名称）"><a href="#3-2-接着修改-config-yml（项目的配置文件，不是主题的）-将-theme-改为-concise（主题的文件夹名称）" class="headerlink" title="3.2. 接着修改 _config.yml（项目的配置文件，不是主题的） 将 theme 改为 concise（主题的文件夹名称）"></a>3.2. 接着修改 _config.yml（项目的配置文件，不是主题的） 将 theme 改为 concise（主题的文件夹名称）</h3><h2 id="四、部署到-github"><a href="#四、部署到-github" class="headerlink" title="四、部署到 github"></a>四、部署到 github</h2><h3 id="4-1-安装-hexo-deployer-git"><a href="#4-1-安装-hexo-deployer-git" class="headerlink" title="4.1. 安装 hexo-deployer-git"></a>4.1. 安装 hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<h3 id="4-2-关于-github-pages"><a href="#4-2-关于-github-pages" class="headerlink" title="4.2. 关于 github pages"></a>4.2. 关于 github pages</h3><h4 id="1-首先分为两类"><a href="#1-首先分为两类" class="headerlink" title="1. 首先分为两类"></a>1. 首先分为两类</h4><ul>
-<li>项目站点（Project Pages）：github 会根据 gh-pages 分支下文件生成静态页面，地址是 <yourname>.github.io/<projectname>。（<yourname> 是你的账户名，<projectname> 是你的项目名）</projectname></yourname></projectname></yourname></li>
-<li>个人或公司站点（User/Organization Pages）：首先要创建一个叫做 <yourname>.github.io 的项目，接着 github 会根据 master 分支下文件生成静态页面，地址是 <yourname>.github.io/。</yourname></yourname></li>
-</ul>
-<h4 id="2-一些坑…"><a href="#2-一些坑…" class="headerlink" title="2. 一些坑…"></a>2. 一些坑…</h4><ul>
+<p>最后打开浏览器输入<code>http://localhost:4000</code>就可以看到页面啦～</p>
+<h2 id="三、换主题（theme）"><a href="#三、换主题（theme）" class="headerlink" title="三、换主题（theme）"></a>三、换主题（theme）</h2><p>然而只是使用默认的主题（theme）怎么会有逼格→_→，果断要整一个吊炸天的主题呀~，下面以 <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank" rel="external">indigo</a> 为例作为说明。</p>
+<h3 id="3-1-下载主题"><a href="#3-1-下载主题" class="headerlink" title="3.1. 下载主题"></a>3.1. 下载主题</h3><p>首先在项目目录下（就是说有个 themes 的文件夹），执行以下命令，将主题下载到 themes 文件夹下的 indigo 文件夹中。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/yscoder/hexo-theme-indigo themes/indigo</div></pre></td></tr></table></figure>
+<h3 id="3-2-配置使用主题"><a href="#3-2-配置使用主题" class="headerlink" title="3.2. 配置使用主题"></a>3.2. 配置使用主题</h3><p>接着修改 _config.yml（项目的配置文件，不是主题的） 将 theme 改为 indigo</p>
+<h2 id="四、部署到-github-pages"><a href="#四、部署到-github-pages" class="headerlink" title="四、部署到 github pages"></a>四、部署到 github pages</h2><h3 id="4-1-安装-hexo-deployer-git"><a href="#4-1-安装-hexo-deployer-git" class="headerlink" title="4.1. 安装 hexo-deployer-git"></a>4.1. 安装 hexo-deployer-git</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<h3 id="4-2-关于-github-pages"><a href="#4-2-关于-github-pages" class="headerlink" title="4.2. 关于 github pages"></a>4.2. 关于 github pages</h3><h4 id="4-2-1-分类"><a href="#4-2-1-分类" class="headerlink" title="4.2.1. 分类"></a>4.2.1. 分类</h4><h5 id="1-项目站点（Project-Pages）"><a href="#1-项目站点（Project-Pages）" class="headerlink" title="1. 项目站点（Project Pages）"></a>1. 项目站点（Project Pages）</h5><p>github 会根据 gh-pages 分支下文件生成静态页面，地址是  [yourName].github.io/[projectName]。（[yourName] 是你的账户名，[projectName] 是你的项目名）</p>
+<h5 id="2-个人或公司站点（User-Organization-Pages）"><a href="#2-个人或公司站点（User-Organization-Pages）" class="headerlink" title="2. 个人或公司站点（User/Organization Pages）"></a>2. 个人或公司站点（User/Organization Pages）</h5><p>首先要创建一个叫做 [yourName].github.io 的项目，接着 github 会根据 master 分支下文件生成静态页面，地址是 [yourName].github.io/。</p>
+<h4 id="4-2-2-一些坑…"><a href="#4-2-2-一些坑…" class="headerlink" title="4.2.2. 一些坑…"></a>4.2.2. 一些坑…</h4><ul>
 <li>有的主题中各种静态文件路径是写死的，比如好多主题中的文件引入是针对第二类页面写死的。</li>
 <li>有些主题中的 CDN 资源被墙，那就需要找到这些文件手动修改地址╮(╯▽╰)╭。</li>
 </ul>
-<h3 id="4-3-修改-config-yml-文件"><a href="#4-3-修改-config-yml-文件" class="headerlink" title="4.3. 修改 _config.yml 文件"></a>4.3. 修改 _config.yml 文件</h3><p><a href="https://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">官方文档</a>中是这么介绍的</p>
+<h3 id="4-3-修改-config-yml-文件"><a href="#4-3-修改-config-yml-文件" class="headerlink" title="4.3. 修改 _config.yml 文件"></a>4.3. 修改 _config.yml 文件</h3><p><a href="htjtps://github.com/hexojs/hexo-deployer-git" target="_blank" rel="external">官方文档</a>中是这么介绍的</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># You can use this:</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  branch: [branch]</div><div class="line">  message: [message]</div><div class="line"></div><div class="line"><span class="comment"># or this:</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  message: [message]</div><div class="line">  repo:</div><div class="line">    github: &lt;repository url&gt;,[branch]</div><div class="line">    gitcafe: &lt;repository url&gt;,[branch]</div></pre></td></tr></table></figure>
 <figure class="highlight delphi"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">* repo: Repository URL</div><div class="line">* branch: Git branch <span class="keyword">to</span> deploy the <span class="keyword">static</span> site <span class="keyword">to</span></div><div class="line">* <span class="keyword">message</span>: Commit <span class="keyword">message</span>. The <span class="keyword">default</span> commit <span class="keyword">message</span> <span class="keyword">is</span> Site updated: <span class="comment">&#123;&#123; now('YYYY-MM-DD HH:mm:ss') &#125;</span>&#125;.</div></pre></td></tr></table></figure>
 <blockquote>
@@ -842,7 +844,7 @@
 <h4 id="2-项目站点"><a href="#2-项目站点" class="headerlink" title="2. 项目站点"></a>2. 项目站点</h4><ul>
 <li>repo：填写项目地址，例如 <code>git@github.com:BuptStEve/blog.git</code></li>
 <li>branch：填写 <code>gh-pages</code></li>
-<li>url：<a href="http://buptsteve.github.io/blog/">http://buptsteve.github.io/blog/</a> （注意最后的 /）</li>
+<li>url：<a href="https://buptsteve.github.io/blog/">https://buptsteve.github.io/blog/</a> （注意最后的 /）</li>
 <li>root：/blog/ （注意最后的 /）</li>
 </ul>
 <h3 id="4-4-开始部署"><a href="#4-4-开始部署" class="headerlink" title="4.4. 开始部署"></a>4.4. 开始部署</h3><p>首先生成站点文件</p>
@@ -854,14 +856,14 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;零、Blog的由来&quot;&gt;&lt;a href=&quot;#零、Blog的由来&quot; class=&quot;headerlink&quot; title=&quot;零、Blog的由来&quot;&gt;&lt;/a&gt;零、Blog的由来&lt;/h2&gt;&lt;p&gt;作为一个学计算机的，一直想整个自己的Blog =￣ω￣=，尤其是最近在搞前端。&lt;br&gt;先是看到&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;jekyll&lt;/a&gt;感觉不错，折腾了半天感觉还是不够给力。&lt;br&gt;最后还是选择了&lt;a href=&quot;https://hexo.io/&quot;&gt;hexo3&lt;/a&gt;。&lt;/p&gt;
+      &lt;h2 id=&quot;零、Blog的由来&quot;&gt;&lt;a href=&quot;#零、Blog的由来&quot; class=&quot;headerlink&quot; title=&quot;零、Blog的由来&quot;&gt;&lt;/a&gt;零、Blog的由来&lt;/h2&gt;&lt;p&gt;作为一个学计算机的，一直想整个自己的 Blog，尤其是最近在搞前端。先是看到 &lt;a href=&quot;http://jekyllcn.com/&quot;&gt;jekyll&lt;/a&gt; 感觉不错，折腾了半天感觉还是不够给力。&lt;br&gt;最后还是选择了 &lt;a href=&quot;https://hexo.io/&quot;&gt;hexo3&lt;/a&gt;。&lt;/p&gt;
     
     </summary>
     
-      <category term="blog" scheme="http://buptsteve.github.io/blog/categories/blog/"/>
+      <category term="blog" scheme="https://buptsteve.github.io/blog/categories/blog/"/>
     
     
-      <category term="hexo" scheme="http://buptsteve.github.io/blog/tags/hexo/"/>
+      <category term="hexo" scheme="https://buptsteve.github.io/blog/tags/hexo/"/>
     
   </entry>
   

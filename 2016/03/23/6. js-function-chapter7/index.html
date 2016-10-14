@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
+
+    
 <head>
-  <meta charset="utf-8">
-  
-  <title>「6」JavaScript 函数表达式学习笔记 | BuptStEve&#39;s Blog | Talk is cheap show me the offer!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="theme-color" content="#3F51B5">
-  
-  
-  <meta name="keywords" content="JavaScript">
-  <meta name="description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
+     <meta charset="utf-8">
+     <meta name="keywords" content="undefined">
+     
+         <meta name="theme-color" content="#3F51B5">
+     
+     <meta name="summary" content="&lt;h2 id=&quot;零、前言&quot;&gt;&lt;a href=&quot;#零、前言&quot; class=&quot;headerlink&quot; title=&quot;零、前言&quot;&gt;&lt;/a&gt;零、前言&lt;/h2&gt;&lt;p&gt;《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。&lt;/p&gt;
+&lt;h3 id=&quot;主要内容有如下三部分&quot;&gt;&lt;a href=&quot;#主要内容有如下三部分&quot; class=&quot;headerlink&quot; title=&quot;主要内容有如下三部分&quot;&gt;&lt;/a&gt;主要内容有如下三部分&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;函数表达式的特征&lt;/li&gt;
+&lt;li&gt;使用函数实现递归&lt;/li&gt;
+&lt;li&gt;使用闭包定义私有变量&lt;/li&gt;
+&lt;/ul&gt;">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     
+
+     <title>「6」JavaScript 函数表达式学习笔记 | BuptStEve&#39;s Blog | Talk is cheap show me the offer!</title>
+
+     
+
+
+    <meta name="description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
 主要内容有如下三部分
 函数表达式的特征
 使用函数实现递归
 使用闭包定义私有变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「6」JavaScript 函数表达式学习笔记">
-<meta property="og:url" content="http://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html">
+<meta property="og:url" content="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html">
 <meta property="og:site_name" content="BuptStEve's Blog">
 <meta property="og:description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
 主要内容有如下三部分
@@ -32,150 +45,165 @@
 函数表达式的特征
 使用函数实现递归
 使用闭包定义私有变量">
-  
-    <link rel="alternative" href="/atom.xml" title="BuptStEve&#39;s Blog" type="application/atom+xml">
-  
-  <meta name="summary" content="&lt;h2 id=&quot;零、前言&quot;&gt;&lt;a href=&quot;#零、前言&quot; class=&quot;headerlink&quot; title=&quot;零、前言&quot;&gt;&lt;/a&gt;零、前言&lt;/h2&gt;&lt;p&gt;《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。&lt;/p&gt;
-&lt;h3 id=&quot;主要内容有如下三部分&quot;&gt;&lt;a href=&quot;#主要内容有如下三部分&quot; class=&quot;headerlink&quot; title=&quot;主要内容有如下三部分&quot;&gt;&lt;/a&gt;主要内容有如下三部分&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;函数表达式的特征&lt;/li&gt;
-&lt;li&gt;使用函数实现递归&lt;/li&gt;
-&lt;li&gt;使用闭包定义私有变量&lt;/li&gt;
-&lt;/ul&gt;">
-  <link rel="shortcut icon" href="/blog/favicon.ico">
-  <link rel="stylesheet" href="/blog/css/style.css">
+
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    
+        <link rel="alternative" href="/blog/atom.xml" title="BuptStEve&#39;s Blog" type="application/atom+xml">
+    
 </head>
 
-<body>
-  <div id="loading" class="active"></div>
 
-  <nav id="menu" class="hide" >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">Steve Young</h5>
-        <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
-      </hgroup>
+    <body>
+        <div id="loading" class="active"></div>
+
+
+        <nav id="menu" class="hide" >
+            <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+
+    <div class="brand-wrap">
+        <div class="brand">
+            <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
+
+            <hgroup class="introduce">
+                <h5 class="nickname">Steve Young</h5>
+                <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
+            </hgroup>
+        </div>
     </div>
-  </div>
-  <div class="scroll-wrap flex-col">
-    <ul class="nav">
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/"  >
-              <i class="icon icon-lg icon-home"></i>
-              主页
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/archives"  >
-              <i class="icon icon-lg icon-archives"></i>
-              Archives
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/tags"  >
-              <i class="icon icon-lg icon-tags"></i>
-              Tags
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="https://github.com/buptsteve" target="_blank" >
-              <i class="icon icon-lg icon-github"></i>
-              Github
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="http://weibo.com/0osteveyoungo0" target="_blank" >
-              <i class="icon icon-lg icon-weibo"></i>
-              Weibo
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/404"  >
-              <i class="icon icon-lg icon-link"></i>
-              测试
-            </a>
-          </li>
-      
-    </ul>
 
-    <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>BuptStEve&#39;s Blog &copy; 2016</p>
-  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+    <div class="scroll-wrap flex-col">
+        <ul class="nav">
+        
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/"  >
+                        <i class="icon icon-lg icon-home"></i>
+
+                        主页
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/archives"  >
+                        <i class="icon icon-lg icon-archives"></i>
+
+                        Archives
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/tags"  >
+                        <i class="icon icon-lg icon-tags"></i>
+
+                        Tags
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="https://github.com/buptsteve" target="_blank" >
+                        <i class="icon icon-lg icon-github"></i>
+
+                        Github
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="http://weibo.com/0osteveyoungo0" target="_blank" >
+                        <i class="icon icon-lg icon-weibo"></i>
+
+                        Weibo
+                    </a>
+                </li>
+            
+        </ul>
+
+        <footer class="footer">
+    <p>
+        <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" />
+        </a>
+    </p>
+
+    <p>BuptStEve&#39;s Blog &copy; 2016</p>
+    <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+    <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+    <a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
-  </div>
+    </div>
 </div>
 
-  </nav>
-  <main id="main">
-    <header class="top-header" id="header">
+        </nav>
+
+        <main id="main">
+            <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
+            <i class="icon icon-lg icon-navicon"></i>
         </a>
+
         <div class="flex-col header-title ellipsis">「6」JavaScript 函数表达式学习笔记</div>
+
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
+            <div class="search-wrap" id="search-wrap">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                    <i class="icon icon-lg icon-chevron-left"></i>
+                </a>
+                <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                    <i class="icon icon-lg icon-search"></i>
+                </a>
+            </div>
+        
+
+        
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+                <i class="icon icon-lg icon-share-alt"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
+
 <header class="content-header">
-  <div class="container">
-    <h1 class="author">「6」JavaScript 函数表达式学习笔记</h1>
-    <h5 class="subtitle">
-        
-            <time datetime="2016-03-23T07:27:58.000Z" itemprop="datePublished" class="page-time">
+    <div class="container">
+        <h1 class="author">「6」JavaScript 函数表达式学习笔记</h1>
+
+        <h5 class="subtitle">
+            
+                <time datetime="2016-03-23T07:27:58.000Z" itemprop="datePublished" class="page-time">
   2016-03-23
 </time>
 
 
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/全栈/">全栈</a></li></ul>
 
-        
-    </h5>
-  </div>
+            
+        </h5>
+    </div>
 </header>
 
-    <div class="container body-wrap">
-      <article id="post-6. js-function-chapter7" 
-  class="article article-type-post" itemprop="blogPost">
+            <div class="container body-wrap">
+                <article id="post-6. js-function-chapter7" class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/JavaScript/">JavaScript</a></li></ul>
 
     </div>
+
     <div class="post-body">
         <aside class="post-widget" id="post-widget">
 
             
-            <div class="post-share" id="post-share">
+                <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -214,15 +242,15 @@
             
 
             
-            <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">零、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要内容有如下三部分"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">主要内容有如下三部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第7章-函数表达式"><span class="post-toc-number"></span> <span class="post-toc-text">一、第7章 函数表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-0-函数定义"><span class="post-toc-number">1.</span> <span class="post-toc-text">7.0. 函数定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-1-函数声明"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">7.0.1. 函数声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-2-函数表达式"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">7.0.2. 函数表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-递归"><span class="post-toc-number">2.</span> <span class="post-toc-text">7.1. 递归</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-闭包"><span class="post-toc-number">3.</span> <span class="post-toc-text">7.2. 闭包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么内部的-bar-函数是怎么保存外部-foo-函数的两个参数的呢？"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-普通函数"><span class="post-toc-number">3.0.1.1.</span> <span class="post-toc-text">1. 普通函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-闭包示例"><span class="post-toc-number">3.0.1.2.</span> <span class="post-toc-text">2. 闭包示例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-1-闭包与变量"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">7.2.1. 闭包与变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-2-关于-this-对象"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">7.2.2. 关于 this 对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-3-内存泄漏"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">7.2.3. 内存泄漏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-模仿块级作用域"><span class="post-toc-number">4.</span> <span class="post-toc-text">7.3. 模仿块级作用域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-4-私有变量"><span class="post-toc-number">5.</span> <span class="post-toc-text">7.4. 私有变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么如果我们需要访问这些私有变量该怎么办呢？"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">那么如果我们需要访问这些私有变量该怎么办呢？</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-1-静态私有变量"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">7.4.1. 静态私有变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-2-模块模式"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">7.4.2. 模块模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-3-增强的模块模式"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">7.4.3. 增强的模块模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-5-小结"><span class="post-toc-number">6.</span> <span class="post-toc-text">7.5. 小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-在-JavaScript-中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点："><span class="post-toc-number">6.0.1.</span> <span class="post-toc-text">1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下："><span class="post-toc-number">6.0.2.</span> <span class="post-toc-text">2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-使用闭包可以模仿块级作用域："><span class="post-toc-number">6.0.3.</span> <span class="post-toc-text">3. 使用闭包可以模仿块级作用域：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-闭包还可以用于在对象中创建私有变量："><span class="post-toc-number">6.0.4.</span> <span class="post-toc-text">4. 闭包还可以用于在对象中创建私有变量：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"><span class="post-toc-number">6.0.5.</span> <span class="post-toc-text">综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</span></a></li></ol></li></ol></li></ol>
-            </nav>
+                <nav class="post-toc-wrap" id="post-toc">
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-text">零、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要内容有如下三部分"><span class="post-toc-text">主要内容有如下三部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第7章-函数表达式"><span class="post-toc-text">一、第7章 函数表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-0-函数定义"><span class="post-toc-text">7.0. 函数定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-1-函数声明"><span class="post-toc-text">7.0.1. 函数声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-2-函数表达式"><span class="post-toc-text">7.0.2. 函数表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-递归"><span class="post-toc-text">7.1. 递归</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-闭包"><span class="post-toc-text">7.2. 闭包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么内部的-bar-函数是怎么保存外部-foo-函数的两个参数的呢？"><span class="post-toc-text">那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-普通函数"><span class="post-toc-text">1. 普通函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-闭包示例"><span class="post-toc-text">2. 闭包示例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-1-闭包与变量"><span class="post-toc-text">7.2.1. 闭包与变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-2-关于-this-对象"><span class="post-toc-text">7.2.2. 关于 this 对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-3-内存泄漏"><span class="post-toc-text">7.2.3. 内存泄漏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-模仿块级作用域"><span class="post-toc-text">7.3. 模仿块级作用域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-4-私有变量"><span class="post-toc-text">7.4. 私有变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么如果我们需要访问这些私有变量该怎么办呢？"><span class="post-toc-text">那么如果我们需要访问这些私有变量该怎么办呢？</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-1-静态私有变量"><span class="post-toc-text">7.4.1. 静态私有变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-2-模块模式"><span class="post-toc-text">7.4.2. 模块模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-3-增强的模块模式"><span class="post-toc-text">7.4.3. 增强的模块模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-5-小结"><span class="post-toc-text">7.5. 小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-在-JavaScript-中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点："><span class="post-toc-text">1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下："><span class="post-toc-text">2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-使用闭包可以模仿块级作用域："><span class="post-toc-text">3. 使用闭包可以模仿块级作用域：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-闭包还可以用于在对象中创建私有变量："><span class="post-toc-text">4. 闭包还可以用于在对象中创建私有变量：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"><span class="post-toc-text">综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</span></a></li></ol></li></ol></li></ol>
+                </nav>
             
         </aside>
 
         <div class="post-main">
-
             <div class="post-content" id="post-content" itemprop="postContent">
+
             <h2 id="零、前言"><a href="#零、前言" class="headerlink" title="零、前言"></a>零、前言</h2><p>《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。</p>
 <h3 id="主要内容有如下三部分"><a href="#主要内容有如下三部分" class="headerlink" title="主要内容有如下三部分"></a>主要内容有如下三部分</h3><ul>
 <li>函数表达式的特征</li>
@@ -381,15 +409,25 @@
 <h4 id="综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"><a href="#综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。" class="headerlink" title="综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"></a>综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</h4>
 
             
-            
-            <blockquote>
-                <p>
-                本文地址：
-                <a href="http://buptsteve.github.io/blog/blog/2016/03/23/6. js-function-chapter7/" target="_blank" rel="external">http://buptsteve.github.io/blog/blog/2016/03/23/6. js-function-chapter7/</a>
-                </p>
-                <footer><cite><a href="http://buptsteve.github.io/blog">@BuptStEve's Blog</a></cite></footer>
-            </blockquote>
+
+                <blockquote>
+                    <p>
+                        本文地址：
+                        <a href="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/" target="_blank" rel="external">https://buptsteve.github.io/blog/blog/2016/03/23/6. js-function-chapter7/</a>
+                    </p>
+                    <p>
+                        本文地址：
+                        <a href="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/" target="_blank" rel="external">https://buptsteve.github.io/blog/blog/2016/03/23/6. js-function-chapter7/</a>
+                    </p>
+
+                    <footer>
+                        <cite>
+                            <a href="https://buptsteve.github.io/blog">@BuptStEve's Blog</a>
+                        </cite>
+                    </footer>
+                </blockquote>
             </div>
+
             
 <nav class="post-nav">
   
@@ -406,10 +444,9 @@
 
 
             
-            
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="6. js-function-chapter7" data-title="「6」JavaScript 函数表达式学习笔记" data-url="http://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"></div>
+	<div class="ds-thread" data-thread-key="6. js-function-chapter7" data-title="「6」JavaScript 函数表达式学习笔记" data-url="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -433,20 +470,27 @@
         </div>
     </div>
 </article>
-    </div>
-  </main>
-<div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "「6」JavaScript 函数表达式学习笔记",
-    pic: "/blog/img/logo.jpg",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"
-};
-</script>
-<div class="global-share" id="global-share">
+            </div>
+        </main>
+
+        <div class="mask" id="mask"></div>
+
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
+    <span class="icon icon-lg icon-chevron-up"></span>
+</a>
+
+
+    <script>
+        var BLOG_SHARE = {
+            title: "「6」JavaScript 函数表达式学习笔记",
+            pic: "/blog/img/logo.jpg",
+            summary: document.getElementsByName('summary')[0].content,
+            url: "https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"
+        };
+    </script>
+
+    <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -485,30 +529,34 @@ var BLOG_SHARE = {
 
 
 
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
+        
+<script src="/blog/js/wave.min.js"></script>
 <script src="/blog/js/main.js"></script>
 
 
-
+    
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
+
 <script type="text/template" id="search-tpl">
-<li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
+    <li class="item">
+        <a href="/{path}" class="waves-block waves-effect">
+            <div class="title ellipsis" title="{title}">{title}</div>
+            
+            <div class="flex-row flex-middle">
+                <div class="tags ellipsis">
+                    {tags}
+                </div>
+
+                <time class="flex-col time">{date}</time>
             </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
+        </a>
+    </li>
 </script>
 
-<script src="/blog/js/search.js"></script>
+    <script src="/blog/js/search.js"></script>
 
 
 
@@ -516,20 +564,17 @@ var BLOG_SHARE = {
 
 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-85691829-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
+        ga('create', 'UA-85691829-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 
-</body>
+    </body>
 </html>

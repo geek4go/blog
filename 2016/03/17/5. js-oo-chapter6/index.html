@@ -1,23 +1,36 @@
 <!DOCTYPE html>
 <html>
+
+    
 <head>
-  <meta charset="utf-8">
-  
-  <title>「5」JavaScript 面向对象深入理解 | BuptStEve&#39;s Blog | Talk is cheap show me the offer!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  
-  <meta name="theme-color" content="#3F51B5">
-  
-  
-  <meta name="keywords" content="JavaScript">
-  <meta name="description" content="零、前言最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。
+     <meta charset="utf-8">
+     <meta name="keywords" content="undefined">
+     
+         <meta name="theme-color" content="#3F51B5">
+     
+     <meta name="summary" content="&lt;h2 id=&quot;零、前言&quot;&gt;&lt;a href=&quot;#零、前言&quot; class=&quot;headerlink&quot; title=&quot;零、前言&quot;&gt;&lt;/a&gt;零、前言&lt;/h2&gt;&lt;p&gt;最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。&lt;/p&gt;
+&lt;h3 id=&quot;同样按照书本的顺序分为如下三部分&quot;&gt;&lt;a href=&quot;#同样按照书本的顺序分为如下三部分&quot; class=&quot;headerlink&quot; title=&quot;同样按照书本的顺序分为如下三部分&quot;&gt;&lt;/a&gt;同样按照书本的顺序分为如下三部分&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;理解对象属性&lt;/li&gt;
+&lt;li&gt;理解并创建对象&lt;/li&gt;
+&lt;li&gt;理解继承&lt;/li&gt;
+&lt;/ul&gt;">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     
+
+     <title>「5」JavaScript 面向对象深入理解 | BuptStEve&#39;s Blog | Talk is cheap show me the offer!</title>
+
+     
+
+
+    <meta name="description" content="零、前言最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。
 同样按照书本的顺序分为如下三部分
 理解对象属性
 理解并创建对象
 理解继承">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「5」JavaScript 面向对象深入理解">
-<meta property="og:url" content="http://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html">
+<meta property="og:url" content="https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html">
 <meta property="og:site_name" content="BuptStEve's Blog">
 <meta property="og:description" content="零、前言最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。
 同样按照书本的顺序分为如下三部分
@@ -32,150 +45,165 @@
 理解对象属性
 理解并创建对象
 理解继承">
-  
-    <link rel="alternative" href="/atom.xml" title="BuptStEve&#39;s Blog" type="application/atom+xml">
-  
-  <meta name="summary" content="&lt;h2 id=&quot;零、前言&quot;&gt;&lt;a href=&quot;#零、前言&quot; class=&quot;headerlink&quot; title=&quot;零、前言&quot;&gt;&lt;/a&gt;零、前言&lt;/h2&gt;&lt;p&gt;最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。&lt;/p&gt;
-&lt;h3 id=&quot;同样按照书本的顺序分为如下三部分&quot;&gt;&lt;a href=&quot;#同样按照书本的顺序分为如下三部分&quot; class=&quot;headerlink&quot; title=&quot;同样按照书本的顺序分为如下三部分&quot;&gt;&lt;/a&gt;同样按照书本的顺序分为如下三部分&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;理解对象属性&lt;/li&gt;
-&lt;li&gt;理解并创建对象&lt;/li&gt;
-&lt;li&gt;理解继承&lt;/li&gt;
-&lt;/ul&gt;">
-  <link rel="shortcut icon" href="/blog/favicon.ico">
-  <link rel="stylesheet" href="/blog/css/style.css">
+
+    <link rel="shortcut icon" href="/blog/img/favicon.ico">
+    <link rel="stylesheet" href="/blog/css/style.css">
+
+    
+        <link rel="alternative" href="/blog/atom.xml" title="BuptStEve&#39;s Blog" type="application/atom+xml">
+    
 </head>
 
-<body>
-  <div id="loading" class="active"></div>
 
-  <nav id="menu" class="hide" >
-   <div class="inner flex-row-vertical">
-  <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
-      <i class="icon icon-lg icon-close"></i>
-  </a>
-  <div class="brand-wrap">
-    <div class="brand">
-      <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
-      <hgroup class="introduce">
-        <h5 class="nickname">Steve Young</h5>
-        <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
-      </hgroup>
+    <body>
+        <div id="loading" class="active"></div>
+
+
+        <nav id="menu" class="hide" >
+            <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+
+    <div class="brand-wrap">
+        <div class="brand">
+            <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
+
+            <hgroup class="introduce">
+                <h5 class="nickname">Steve Young</h5>
+                <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
+            </hgroup>
+        </div>
     </div>
-  </div>
-  <div class="scroll-wrap flex-col">
-    <ul class="nav">
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/"  >
-              <i class="icon icon-lg icon-home"></i>
-              主页
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/archives"  >
-              <i class="icon icon-lg icon-archives"></i>
-              Archives
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/tags"  >
-              <i class="icon icon-lg icon-tags"></i>
-              Tags
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="https://github.com/buptsteve" target="_blank" >
-              <i class="icon icon-lg icon-github"></i>
-              Github
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="http://weibo.com/0osteveyoungo0" target="_blank" >
-              <i class="icon icon-lg icon-weibo"></i>
-              Weibo
-            </a>
-          </li>
-      
-          <li class="waves-block waves-effect">
-            <a href="/blog/404"  >
-              <i class="icon icon-lg icon-link"></i>
-              测试
-            </a>
-          </li>
-      
-    </ul>
 
-    <footer class="footer">
-  <p><a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" /></a></p>
-  <p>BuptStEve&#39;s Blog &copy; 2016</p>
-  <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
-  <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
-  <a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
+    <div class="scroll-wrap flex-col">
+        <ul class="nav">
+        
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/"  >
+                        <i class="icon icon-lg icon-home"></i>
+
+                        主页
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/archives"  >
+                        <i class="icon icon-lg icon-archives"></i>
+
+                        Archives
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="/blog/tags"  >
+                        <i class="icon icon-lg icon-tags"></i>
+
+                        Tags
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="https://github.com/buptsteve" target="_blank" >
+                        <i class="icon icon-lg icon-github"></i>
+
+                        Github
+                    </a>
+                </li>
+            
+
+                <li class="waves-block waves-effect">
+                    <a href="http://weibo.com/0osteveyoungo0" target="_blank" >
+                        <i class="icon icon-lg icon-weibo"></i>
+
+                        Weibo
+                    </a>
+                </li>
+            
+        </ul>
+
+        <footer class="footer">
+    <p>
+        <a rel="license" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <img alt="Creative Commons License" style="border-width:0;vertical-align:middle;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAPCAMAAABEF7i9AAAAllBMVEUAAAD///+rsapERER3d3eIiIjMzMzu7u4iIiKUmZO6v7rKzsoODg4RERFVVVUNDQ0NDg0PEA8zMzNLTEtbXltmZmZydnF9gn2AgICPkI+ZmZmqqqq7u7vFxsXIzMgNDQwZGRkgICAhISEkJSMnKCcuMC4xMzE5Ozk7PTtBQkFCQkJDQ0Nna2eGhoaHh4ezuLLGysbd3d1wVGpAAAAA4UlEQVR42q2T1xqCMAyFk7QsBQeKA9x7j/d/OSm22CpX0nzcpA1/T05aAOuBVkMAScQFHLnEwoCo2f1TnQIGoVMewjZEjVFN4GH1Ue1Cn2jWqwfsOOj6wDwGvotsl/c8lv7KIq1eLOsT0HMFHMIE/RZyHnlphryT9zyV+8WH5e8yQw3wnQvgAFxPTKUVi555SHR/lOfLMgVTeDlSfN+TaoUsiTyeIm+bCkHvCA2FUKG48LDtYBZBknsYP/G8NTw0gaaHyuQf4H5pecrB/FYCT2sL9zAfy1Xyjou6L8X2W7YcLyBZCRtnq/zfAAAAAElFTkSuQmCC" />
+        </a>
+    </p>
+
+    <p>BuptStEve&#39;s Blog &copy; 2016</p>
+    <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
+    <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
+    <a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
 </footer>
 
-  </div>
+    </div>
 </div>
 
-  </nav>
-  <main id="main">
-    <header class="top-header" id="header">
+        </nav>
+
+        <main id="main">
+            <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
-          <i class="icon icon-lg icon-navicon"></i>
+            <i class="icon icon-lg icon-navicon"></i>
         </a>
+
         <div class="flex-col header-title ellipsis">「5」JavaScript 面向对象深入理解</div>
+
         
-        <div class="search-wrap" id="search-wrap">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
-                <i class="icon icon-lg icon-chevron-left"></i>
+            <div class="search-wrap" id="search-wrap">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                    <i class="icon icon-lg icon-chevron-left"></i>
+                </a>
+                <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
+                <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                    <i class="icon icon-lg icon-search"></i>
+                </a>
+            </div>
+        
+
+        
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
+                <i class="icon icon-lg icon-share-alt"></i>
             </a>
-            <input type="text" id="key" class="search-input " autocomplete="off" placeholder="输入感兴趣的关键字">
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
-                <i class="icon icon-lg icon-search"></i>
-            </a>
-        </div>
-        
-        
-        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-            <i class="icon icon-lg icon-share-alt"></i>
-        </a>
         
     </div>
 </header>
+
 <header class="content-header">
-  <div class="container">
-    <h1 class="author">「5」JavaScript 面向对象深入理解</h1>
-    <h5 class="subtitle">
-        
-            <time datetime="2016-03-17T08:27:58.000Z" itemprop="datePublished" class="page-time">
+    <div class="container">
+        <h1 class="author">「5」JavaScript 面向对象深入理解</h1>
+
+        <h5 class="subtitle">
+            
+                <time datetime="2016-03-17T08:27:58.000Z" itemprop="datePublished" class="page-time">
   2016-03-17
 </time>
 
 
 	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/blog/categories/全栈/">全栈</a></li></ul>
 
-        
-    </h5>
-  </div>
+            
+        </h5>
+    </div>
 </header>
 
-    <div class="container body-wrap">
-      <article id="post-5. js-oo-chapter6" 
-  class="article article-type-post" itemprop="blogPost">
+            <div class="container body-wrap">
+                <article id="post-5. js-oo-chapter6" class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/JavaScript/">JavaScript</a></li></ul>
 
     </div>
+
     <div class="post-body">
         <aside class="post-widget" id="post-widget">
 
             
-            <div class="post-share" id="post-share">
+                <div class="post-share" id="post-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -214,15 +242,15 @@
             
 
             
-            <nav class="post-toc-wrap" id="post-toc">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">零、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同样按照书本的顺序分为如下三部分"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">同样按照书本的顺序分为如下三部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第6章-面向对象的程序设计"><span class="post-toc-number"></span> <span class="post-toc-text">一、第6章 面向对象的程序设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-1-理解对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">6.1. 理解对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-1-属性类型"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">6.1.1. 属性类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-2-数据属性"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">6.1.2. 数据属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-3-访问器属性"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">6.1.3. 访问器属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-4-定义多个属性"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">6.1.4. 定义多个属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-5-读取属性的特性"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">6.1.5. 读取属性的特性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-2-创建对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">6.2. 创建对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-1-工厂模式"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">6.2.1. 工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-2-构造函数模式"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">6.2.2. 构造函数模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#与工厂模式的不同之处"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">与工厂模式的不同之处</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要创建新实例，必须使用-new-操作符。这个过程经历以下4个步骤："><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">要创建新实例，必须使用 new 操作符。这个过程经历以下4个步骤：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-构造函数当作普通函数"><span class="post-toc-number">2.2.3.</span> <span class="post-toc-text">1. 构造函数当作普通函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-构造函数的问题"><span class="post-toc-number">2.2.4.</span> <span class="post-toc-text">2. 构造函数的问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-1-每个方法有独立的内存，造成浪费。"><span class="post-toc-number">2.2.4.1.</span> <span class="post-toc-text">2.1. 每个方法有独立的内存，造成浪费。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-3-原型模式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">6.2.3. 原型模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-深入理解原型对象"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">1. 深入理解原型对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#下面进行详细说明："><span class="post-toc-number">2.3.1.1.</span> <span class="post-toc-text">下面进行详细说明：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#那么这玩意儿这么复杂有啥用咧…"><span class="post-toc-number">2.3.1.2.</span> <span class="post-toc-text">那么这玩意儿这么复杂有啥用咧…?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#a-那么问题来了，怎么判断一个属性究竟是实例的还是原型链上的？"><span class="post-toc-number">2.3.1.2.1.</span> <span class="post-toc-text">a. 那么问题来了，怎么判断一个属性究竟是实例的还是原型链上的？</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#b-那么问题又来了，如果就是没有咋办？"><span class="post-toc-number">2.3.1.2.2.</span> <span class="post-toc-text">b. 那么问题又来了，如果就是没有咋办？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-原型与-in-操作符"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">2. 原型与 in 操作符</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-更简单的原型方法"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">3. 更简单的原型方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-原型的动态性"><span class="post-toc-number">2.3.4.</span> <span class="post-toc-text">4. 原型的动态性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-原型对象的原型"><span class="post-toc-number">2.3.5.</span> <span class="post-toc-text">5. 原型对象的原型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-原型对象的问题"><span class="post-toc-number">2.3.6.</span> <span class="post-toc-text">6. 原型对象的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-4-组合使用构造函数模式和原型模式"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">6.2.4. 组合使用构造函数模式和原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-5-动态原型模式"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">6.2.5. 动态原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-6-寄生构造函数模式"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">6.2.6. 寄生构造函数模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#这个模式其实利用了构造函数的特性："><span class="post-toc-number">2.6.1.</span> <span class="post-toc-text">这个模式其实利用了构造函数的特性：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-7-稳妥构造函数模式"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">6.2.7. 稳妥构造函数模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-3-继承"><span class="post-toc-number">3.</span> <span class="post-toc-text">6.3. 继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-1-原型链"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">6.3.1. 原型链</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#假如我们让「原型对象」等于另一个类型的「实例」，结果会是怎样的呢？"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">假如我们让「原型对象」等于另一个类型的「实例」，结果会是怎样的呢？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下面再来看看一种实现原型链的基本模式"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">下面再来看看一种实现原型链的基本模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-别忘记默认的原型"><span class="post-toc-number">3.1.3.</span> <span class="post-toc-text">1. 别忘记默认的原型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-确定原型和实例的关系"><span class="post-toc-number">3.1.4.</span> <span class="post-toc-text">2. 确定原型和实例的关系</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-谨慎地定义方法"><span class="post-toc-number">3.1.5.</span> <span class="post-toc-text">3. 谨慎地定义方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-原型链的问题"><span class="post-toc-number">3.1.6.</span> <span class="post-toc-text">4. 原型链的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-2-借用构造函数"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">6.3.2. 借用构造函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-传递参数"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">1. 传递参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-借用构造函数的问题"><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">2. 借用构造函数的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-3-组合继承"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">6.3.3. 组合继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要解决组合模式存在的问题，首先来看几个其他方式的继承。"><span class="post-toc-number">3.3.1.</span> <span class="post-toc-text">要解决组合模式存在的问题，首先来看几个其他方式的继承。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-4-原型式继承"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">6.3.4. 原型式继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-5-寄生式继承"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">6.3.5. 寄生式继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-6-寄生组合式继承"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">6.3.6. 寄生组合式继承</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-4-小结"><span class="post-toc-number">4.</span> <span class="post-toc-text">6.4. 小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建对象"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">创建对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象继承"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">对象继承</span></a></li></ol></li></ol>
-            </nav>
+                <nav class="post-toc-wrap" id="post-toc">
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-text">零、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#同样按照书本的顺序分为如下三部分"><span class="post-toc-text">同样按照书本的顺序分为如下三部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第6章-面向对象的程序设计"><span class="post-toc-text">一、第6章 面向对象的程序设计</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-1-理解对象"><span class="post-toc-text">6.1. 理解对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-1-属性类型"><span class="post-toc-text">6.1.1. 属性类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-2-数据属性"><span class="post-toc-text">6.1.2. 数据属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-3-访问器属性"><span class="post-toc-text">6.1.3. 访问器属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-4-定义多个属性"><span class="post-toc-text">6.1.4. 定义多个属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-1-5-读取属性的特性"><span class="post-toc-text">6.1.5. 读取属性的特性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-2-创建对象"><span class="post-toc-text">6.2. 创建对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-1-工厂模式"><span class="post-toc-text">6.2.1. 工厂模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-2-构造函数模式"><span class="post-toc-text">6.2.2. 构造函数模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#与工厂模式的不同之处"><span class="post-toc-text">与工厂模式的不同之处</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要创建新实例，必须使用-new-操作符。这个过程经历以下4个步骤："><span class="post-toc-text">要创建新实例，必须使用 new 操作符。这个过程经历以下4个步骤：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-构造函数当作普通函数"><span class="post-toc-text">1. 构造函数当作普通函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-构造函数的问题"><span class="post-toc-text">2. 构造函数的问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-1-每个方法有独立的内存，造成浪费。"><span class="post-toc-text">2.1. 每个方法有独立的内存，造成浪费。</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-3-原型模式"><span class="post-toc-text">6.2.3. 原型模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-深入理解原型对象"><span class="post-toc-text">1. 深入理解原型对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#下面进行详细说明："><span class="post-toc-text">下面进行详细说明：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#那么这玩意儿这么复杂有啥用咧…"><span class="post-toc-text">那么这玩意儿这么复杂有啥用咧…?</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#a-那么问题来了，怎么判断一个属性究竟是实例的还是原型链上的？"><span class="post-toc-text">a. 那么问题来了，怎么判断一个属性究竟是实例的还是原型链上的？</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#b-那么问题又来了，如果就是没有咋办？"><span class="post-toc-text">b. 那么问题又来了，如果就是没有咋办？</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-原型与-in-操作符"><span class="post-toc-text">2. 原型与 in 操作符</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-更简单的原型方法"><span class="post-toc-text">3. 更简单的原型方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-原型的动态性"><span class="post-toc-text">4. 原型的动态性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-原型对象的原型"><span class="post-toc-text">5. 原型对象的原型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-原型对象的问题"><span class="post-toc-text">6. 原型对象的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-4-组合使用构造函数模式和原型模式"><span class="post-toc-text">6.2.4. 组合使用构造函数模式和原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-5-动态原型模式"><span class="post-toc-text">6.2.5. 动态原型模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-6-寄生构造函数模式"><span class="post-toc-text">6.2.6. 寄生构造函数模式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#这个模式其实利用了构造函数的特性："><span class="post-toc-text">这个模式其实利用了构造函数的特性：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-2-7-稳妥构造函数模式"><span class="post-toc-text">6.2.7. 稳妥构造函数模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-3-继承"><span class="post-toc-text">6.3. 继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-1-原型链"><span class="post-toc-text">6.3.1. 原型链</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#假如我们让「原型对象」等于另一个类型的「实例」，结果会是怎样的呢？"><span class="post-toc-text">假如我们让「原型对象」等于另一个类型的「实例」，结果会是怎样的呢？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#下面再来看看一种实现原型链的基本模式"><span class="post-toc-text">下面再来看看一种实现原型链的基本模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-别忘记默认的原型"><span class="post-toc-text">1. 别忘记默认的原型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-确定原型和实例的关系"><span class="post-toc-text">2. 确定原型和实例的关系</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-谨慎地定义方法"><span class="post-toc-text">3. 谨慎地定义方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-原型链的问题"><span class="post-toc-text">4. 原型链的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-2-借用构造函数"><span class="post-toc-text">6.3.2. 借用构造函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-传递参数"><span class="post-toc-text">1. 传递参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-借用构造函数的问题"><span class="post-toc-text">2. 借用构造函数的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-3-组合继承"><span class="post-toc-text">6.3.3. 组合继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要解决组合模式存在的问题，首先来看几个其他方式的继承。"><span class="post-toc-text">要解决组合模式存在的问题，首先来看几个其他方式的继承。</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-4-原型式继承"><span class="post-toc-text">6.3.4. 原型式继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-5-寄生式继承"><span class="post-toc-text">6.3.5. 寄生式继承</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-3-6-寄生组合式继承"><span class="post-toc-text">6.3.6. 寄生组合式继承</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-4-小结"><span class="post-toc-text">6.4. 小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建对象"><span class="post-toc-text">创建对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象继承"><span class="post-toc-text">对象继承</span></a></li></ol></li></ol>
+                </nav>
             
         </aside>
 
         <div class="post-main">
-
             <div class="post-content" id="post-content" itemprop="postContent">
+
             <h2 id="零、前言"><a href="#零、前言" class="headerlink" title="零、前言"></a>零、前言</h2><p>最近为了找暑假实习，正在恶补基础╮(╯▽╰)╭，仔细研读了《JavaScript 高级程序设计（第三版）》第6章 面向对象的程序设计。感觉收获颇多，在此献丑分享一点儿自己的理解。</p>
 <h3 id="同样按照书本的顺序分为如下三部分"><a href="#同样按照书本的顺序分为如下三部分" class="headerlink" title="同样按照书本的顺序分为如下三部分"></a>同样按照书本的顺序分为如下三部分</h3><ul>
 <li>理解对象属性</li>
@@ -432,15 +460,25 @@
 
 
             
-            
-            <blockquote>
-                <p>
-                本文地址：
-                <a href="http://buptsteve.github.io/blog/blog/2016/03/17/5. js-oo-chapter6/" target="_blank" rel="external">http://buptsteve.github.io/blog/blog/2016/03/17/5. js-oo-chapter6/</a>
-                </p>
-                <footer><cite><a href="http://buptsteve.github.io/blog">@BuptStEve's Blog</a></cite></footer>
-            </blockquote>
+
+                <blockquote>
+                    <p>
+                        本文地址：
+                        <a href="https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/" target="_blank" rel="external">https://buptsteve.github.io/blog/blog/2016/03/17/5. js-oo-chapter6/</a>
+                    </p>
+                    <p>
+                        本文地址：
+                        <a href="https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/" target="_blank" rel="external">https://buptsteve.github.io/blog/blog/2016/03/17/5. js-oo-chapter6/</a>
+                    </p>
+
+                    <footer>
+                        <cite>
+                            <a href="https://buptsteve.github.io/blog">@BuptStEve's Blog</a>
+                        </cite>
+                    </footer>
+                </blockquote>
             </div>
+
             
 <nav class="post-nav">
   
@@ -464,10 +502,9 @@
 
 
             
-            
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="5. js-oo-chapter6" data-title="「5」JavaScript 面向对象深入理解" data-url="http://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html"></div>
+	<div class="ds-thread" data-thread-key="5. js-oo-chapter6" data-title="「5」JavaScript 面向对象深入理解" data-url="https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -491,20 +528,27 @@
         </div>
     </div>
 </article>
-    </div>
-  </main>
-<div class="mask" id="mask"></div>
-<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
-<script>
-var BLOG_SHARE = {
-    title: "「5」JavaScript 面向对象深入理解",
-    pic: "/blog/img/logo.jpg",
-    summary: document.getElementsByName('summary')[0].content,
-    url: "http://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html"
-};
-</script>
-<div class="global-share" id="global-share">
+            </div>
+        </main>
+
+        <div class="mask" id="mask"></div>
+
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
+    <span class="icon icon-lg icon-chevron-up"></span>
+</a>
+
+
+    <script>
+        var BLOG_SHARE = {
+            title: "「5」JavaScript 面向对象深入理解",
+            pic: "/blog/img/logo.jpg",
+            summary: document.getElementsByName('summary')[0].content,
+            url: "https://buptsteve.github.io/blog/2016/03/17/5. js-oo-chapter6/index.html"
+        };
+    </script>
+
+    <div class="global-share" id="global-share">
     <div class="tit">分享到：</div>
     <ul class="reset share-icons">
       <li>
@@ -543,30 +587,34 @@ var BLOG_SHARE = {
 
 
 
-<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 
+        
+<script src="/blog/js/wave.min.js"></script>
 <script src="/blog/js/main.js"></script>
 
 
-
+    
 <div class="search-panel" id="search-panel">
     <ul class="search-result" id="search-result"></ul>
 </div>
+
 <script type="text/template" id="search-tpl">
-<li class="item">
-    <a href="/{path}" class="waves-block waves-effect">
-        <div class="title ellipsis" title="{title}">{title}</div>
-        <div class="flex-row flex-middle">
-            <div class="tags ellipsis">
-                {tags}
+    <li class="item">
+        <a href="/{path}" class="waves-block waves-effect">
+            <div class="title ellipsis" title="{title}">{title}</div>
+            
+            <div class="flex-row flex-middle">
+                <div class="tags ellipsis">
+                    {tags}
+                </div>
+
+                <time class="flex-col time">{date}</time>
             </div>
-            <time class="flex-col time">{date}</time>
-        </div>
-    </a>
-</li>
+        </a>
+    </li>
 </script>
 
-<script src="/blog/js/search.js"></script>
+    <script src="/blog/js/search.js"></script>
 
 
 
@@ -574,20 +622,17 @@ var BLOG_SHARE = {
 
 
 
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-ga('create', 'UA-85691829-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
+        ga('create', 'UA-85691829-1', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 
 
-</body>
+    </body>
 </html>
