@@ -13,14 +13,14 @@
 &lt;li&gt;html/css/js 代码的预编译：  &lt;ul&gt;
 &lt;li&gt;Jade, Ejs…&lt;/li&gt;
 &lt;li&gt;Sass, Less, Stylus…&lt;/li&gt;
-&lt;li&gt;Dart, CoffeeScript, TypeScript, ES6/7… &lt;/li&gt;
+&lt;li&gt;Dart, CoffeeScript, TypeScript, ES6/7…&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;拯救你的 F5 或者 Command/Ctrl + R（即自动监听、编译并刷新浏览器）&lt;/li&gt;
 &lt;li&gt;发布时的代码压缩、混淆，图片的压缩和 base64 嵌入&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;以上这些「体力♂活儿」显然不能自己浪费时间手动完成，so 优雅的解决方式就是：自动化构建工具咯～=￣ω￣=～！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上这些「体力♂活儿」显然不能自己浪费时间手动完成，所以优雅的解决方式就是：自动化构建工具～！&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -36,26 +36,32 @@
 html/css/js 代码的预编译：  
 Jade, Ejs…
 Sass, Less, Stylus…
-Dart, CoffeeScript, TypeScript, ES6/7… 
+Dart, CoffeeScript, TypeScript, ES6/7…
 
 
 拯救你的 F5 或者 Command/Ctrl + R（即自动监听、编译并刷新浏览器）
-发布时的代码压缩、混淆，图片的压缩和 base64 嵌入">
+发布时的代码压缩、混淆，图片的压缩和 base64 嵌入
+
+
+以">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「3」前端开发利器 webpack">
-<meta property="og:url" content="https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/index.html">
+<meta property="og:url" content="https://buptsteve.github.io/blog/2015/12/29/3.js-webpack/index.html">
 <meta property="og:site_name" content="BuptStEve's Blog">
 <meta property="og:description" content="零、前言在编写构建前端项目时，以下这些需求想必十分常见：
 
 html/css/js 代码的预编译：  
 Jade, Ejs…
 Sass, Less, Stylus…
-Dart, CoffeeScript, TypeScript, ES6/7… 
+Dart, CoffeeScript, TypeScript, ES6/7…
 
 
 拯救你的 F5 或者 Command/Ctrl + R（即自动监听、编译并刷新浏览器）
-发布时的代码压缩、混淆，图片的压缩和 base64 嵌入">
-<meta property="og:updated_time" content="2016-10-14T02:56:45.392Z">
+发布时的代码压缩、混淆，图片的压缩和 base64 嵌入
+
+
+以">
+<meta property="og:updated_time" content="2016-10-14T16:17:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「3」前端开发利器 webpack">
 <meta name="twitter:description" content="零、前言在编写构建前端项目时，以下这些需求想必十分常见：
@@ -63,11 +69,14 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 html/css/js 代码的预编译：  
 Jade, Ejs…
 Sass, Less, Stylus…
-Dart, CoffeeScript, TypeScript, ES6/7… 
+Dart, CoffeeScript, TypeScript, ES6/7…
 
 
 拯救你的 F5 或者 Command/Ctrl + R（即自动监听、编译并刷新浏览器）
-发布时的代码压缩、混淆，图片的压缩和 base64 嵌入">
+发布时的代码压缩、混淆，图片的压缩和 base64 嵌入
+
+
+以">
 
     <link rel="shortcut icon" href="/blog/img/favicon.ico">
     <link rel="stylesheet" href="/blog/css/style.css">
@@ -90,11 +99,11 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 
     <div class="brand-wrap">
         <div class="brand">
-            <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
+            <a href="/blog" class="avatar"><img src="/blog/img/logo.jpg"></a>
 
             <hgroup class="introduce">
                 <h5 class="nickname">Steve Young</h5>
-                <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
+                <a href="mailto:yangzhenyu2016@gmail.com" title="yangzhenyu2016@gmail.com" class="mail">yangzhenyu2016@gmail.com</a>
             </hgroup>
         </div>
     </div>
@@ -156,7 +165,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
         </a>
     </p>
 
-    <p>BuptStEve&#39;s Blog &copy; 2016</p>
+    <p>BuptStEve&#39;s Blog &copy; 2017</p>
     <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
     <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
     <a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
@@ -189,10 +198,6 @@ Dart, CoffeeScript, TypeScript, ES6/7…
         
 
         
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-                <i class="icon icon-lg icon-share-alt"></i>
-            </a>
-        
     </div>
 </header>
 
@@ -215,7 +220,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 </header>
 
             <div class="container body-wrap">
-                <article id="post-3. js-webpack" class="article article-type-post" itemprop="blogPost">
+                <article id="post-3.js-webpack" class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/webpack/">webpack</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/效率/">效率</a></li></ul>
@@ -226,47 +231,10 @@ Dart, CoffeeScript, TypeScript, ES6/7…
         <aside class="post-widget" id="post-widget">
 
             
-                <div class="post-share" id="post-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
-
-            
 
             
                 <nav class="post-toc-wrap" id="post-toc">
-                    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-text">零、前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、webpack"><span class="post-toc-text">一、webpack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-为什么选择-webpack-参考链接"><span class="post-toc-text">1.1. 为什么选择 webpack ? 参考链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？"><span class="post-toc-text">a. 首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#b-明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？"><span class="post-toc-text">b. 明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#c-此外还有一个重要原因：webpack-支持模块热替换（HMR）（例如-react-hot-loader）"><span class="post-toc-text">c. 此外还有一个重要原因：webpack 支持模块热替换（HMR）（例如 react-hot-loader）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-怎么使用-webpack？"><span class="post-toc-text">1.2. 怎么使用 webpack？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-webpack-的安装："><span class="post-toc-text">a. webpack 的安装：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#b-webpack-的配置：官方文档、Pete-Hunt"><span class="post-toc-text">b. webpack 的配置：官方文档、Pete Hunt</span></a></li></ol></li></ol></li></ol>
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-text">零、前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、webpack"><span class="post-toc-text">一、webpack</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-为什么选择-webpack-参考链接"><span class="post-toc-text">1.1. 为什么选择 webpack ? 参考链接</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-模块化"><span class="post-toc-text">a. 模块化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#b-代码传输"><span class="post-toc-text">b. 代码传输</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#c-模块热替换（HMR）"><span class="post-toc-text">c. 模块热替换（HMR）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-怎么使用-webpack？"><span class="post-toc-text">1.2. 怎么使用 webpack？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#a-webpack-的安装"><span class="post-toc-text">a. webpack 的安装</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#b-webpack-的配置"><span class="post-toc-text">b. webpack 的配置</span></a></li></ol></li></ol></li></ol>
                 </nav>
             
         </aside>
@@ -279,47 +247,57 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 <li>html/css/js 代码的预编译：  <ul>
 <li>Jade, Ejs…</li>
 <li>Sass, Less, Stylus…</li>
-<li>Dart, CoffeeScript, TypeScript, ES6/7… </li>
+<li>Dart, CoffeeScript, TypeScript, ES6/7…</li>
 </ul>
 </li>
 <li>拯救你的 F5 或者 Command/Ctrl + R（即自动监听、编译并刷新浏览器）</li>
 <li>发布时的代码压缩、混淆，图片的压缩和 base64 嵌入</li>
 </ol>
 <blockquote>
-<p><strong>以上这些「体力♂活儿」显然不能自己浪费时间手动完成，so 优雅的解决方式就是：自动化构建工具咯～=￣ω￣=～！</strong></p>
+<p><strong>以上这些「体力♂活儿」显然不能自己浪费时间手动完成，所以优雅的解决方式就是：自动化构建工具～！</strong></p>
 </blockquote>
 <a id="more"></a>
 <p>话说我最早了解到前端自动化构建工具，是通过慕课网学习的时候看到的 grunt 教程，随意浏览了点儿发现上手有点儿难 _(:зゝ∠)_ 同时也没有什么需求就没有学下去。  </p>
-<p>然后学习了 less/sass/stylus 等预编译语言，先是使用了 <a href="http://koala-app.com/index-zh.html" target="_blank" rel="external">koala</a> 进行 less 文件的编译。之后又有了「拯救 F5」的需求，觉得再使用 <a href="http://livereload.com/" target="_blank" rel="external">livereload</a> 这样不够绅士(´･ω･`)。于是开始学习 gulp， gulp 是基于 Unix 的哲♂学，即 </p>
+<p>然后学习了 less/sass/stylus 等预编译语言，先是使用了 <a href="http://koala-app.com/index-zh.html" target="_blank" rel="external">koala</a> 进行 less 文件的编译。之后又有了「拯救 F5」的需求，觉得再使用 <a href="http://livereload.com/" target="_blank" rel="external">livereload</a> 这样不够绅士(´･ω･`)。于是开始学习 gulp， gulp 是基于 Unix 的哲♂学，即</p>
 <blockquote>
 <p>Do one thing and do it well.  </p>
 </blockquote>
-<p>类似于 Unix 的管道命令（pipe：| ），gulp 基于 Node.js 中的 <a href="https://nodejs.org/api/stream.html" target="_blank" rel="external">stream</a> 机制。Gulp 的每个插件从 stream 中读取输入，做一些处理，再输出到stream中。同时使用 <a href="https://www.npmjs.com/package/browser-sync" target="_blank" rel="external">browser-sync</a> 插件能够解决我的重复刷新的繁重劳动。</p>
+<p>类似于 Unix 的管道命令（pipe：| ），gulp 基于 Node.js 中的 <a href="https://nodejs.org/api/stream.html" target="_blank" rel="external">stream</a> 机制。Gulp 的每个插件从 stream 中读取输入，做一些处理，再输出到 stream 中。同时使用 <a href="https://www.npmjs.com/package/browser-sync" target="_blank" rel="external">browser-sync</a> 插件能够解决我的重复刷新的繁重劳动。</p>
 <p>无奈前端变化太快_(:зゝ∠)_，使用 gulp 没多久。通过 <a href="http://cn.vuejs.org" target="_blank" rel="external">vue.js</a> 一个 MVVM 框架，知道了 webpack 这一新的前端自动化构建工具。使用 webpack 可以方便地将 <code>*.vue</code>文件编译打包到工程中，并且 react 的大部分项目也使用 webpack 进行构建。那么问题来了，webpack 究竟靠什么火起来了呢？</p>
-<h2 id="一、webpack"><a href="#一、webpack" class="headerlink" title="一、webpack"></a>一、webpack</h2><h3 id="1-1-为什么选择-webpack-参考链接"><a href="#1-1-为什么选择-webpack-参考链接" class="headerlink" title="1.1. 为什么选择 webpack ? 参考链接"></a>1.1. 为什么选择 webpack ? <a href="http://webpack.github.io/docs/motivation.html" target="_blank" rel="external">参考链接</a></h3><h4 id="a-首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？"><a href="#a-首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？" class="headerlink" title="a. 首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？"></a>a. 首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？</h4><p>答案只有一个：</p>
+<h2 id="一、webpack"><a href="#一、webpack" class="headerlink" title="一、webpack"></a>一、webpack</h2><h3 id="1-1-为什么选择-webpack-参考链接"><a href="#1-1-为什么选择-webpack-参考链接" class="headerlink" title="1.1. 为什么选择 webpack ? 参考链接"></a>1.1. 为什么选择 webpack ? <a href="http://webpack.github.io/docs/motivation.html" target="_blank" rel="external">参考链接</a></h3><h4 id="a-模块化"><a href="#a-模块化" class="headerlink" title="a. 模块化"></a>a. 模块化</h4><p>首先要明确：随着前端越来越「重」，项目变得越来越大，团队人数增加、功能增加地越多，势必引起出错、依赖情况的出现。那么想想服务器端、桌面大型程序等是怎么做的呢？  </p>
+<p>答案只有一个：<strong>模块化开发！</strong></p>
 <blockquote>
-<p>模块化开发！</p>
 <p>然而浏览器本身并不提供模块管理的机制（ES6 终于引入 Module），为了调用各个模块，有时不得不在网页中，加入一大堆script标签。这样就使得网页体积臃肿，难以维护，还产生大量的HTTP请求，拖慢显示速度，影响用户体验。  </p>
 <p>在此对于模块化就不继续展开了…Require.js/Sea.js/Common.js/AMD/CMD/ES6…etc.</p>
 </blockquote>
-<h4 id="b-明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？"><a href="#b-明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？" class="headerlink" title="b. 明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？"></a>b. 明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？</h4><p><strong>有两种「极端」的方式</strong>：  </p>
+<h4 id="b-代码传输"><a href="#b-代码传输" class="headerlink" title="b. 代码传输"></a>b. 代码传输</h4><p>明确了模块化开发这一前提之后，那么新的问题又来了…模块化之后的文件怎么从服务器传递到客户端（浏览器）？  </p>
+<p><strong>有两种「极端」的方式</strong>：  </p>
 <ul>
-<li>每一个请求传送一个模块（类似于一堆的 <srcipt> 标签…）</srcipt></li>
+<li>每一个请求传送一个模块（类似于一堆的 <code>&lt;srcipt&gt;</code> 标签…）</li>
 <li>一个请求传送所有模块（例如 browserify 的打包方式）  </li>
 </ul>
 <p>这两种方式方式各有优缺点：  </p>
 <ol>
-<li>优点：只加载需要的模块；缺点：大量请求会使得启动缓慢…</li>
-<li>优点：请求数少，等待时间少；缺点：不需要的模块同样被传送了…</li>
+<li>一个请求一个模块<ul>
+<li>优点：只加载需要的模块；</li>
+<li>缺点：大量请求会使得启动缓慢…</li>
+</ul>
+</li>
+<li>一个请求所有模块<ul>
+<li>优点：请求数少，等待时间少；</li>
+<li>缺点：不需要的模块同样被传送了…</li>
+</ul>
+</li>
 </ol>
 <p>因此，在大多数的情况下最佳实践应该是一个折中的方案：  </p>
 <blockquote>
 <p>在编译所有模块时，将模块细分成为多个小的 batches(chunks)，于是我们分解得到了许多请求。模块的 chunks 初始状态时并没有全部加载，只在需要的时候发起请求。因此初始请求不会包含所有的代码，显然加载的代码量更小，速度更快。  </p>
 </blockquote>
 <p>其中关键的「分割点」即 chunks 的划分边界，是取决于开发者并且是可选的。</p>
-<h4 id="c-此外还有一个重要原因：webpack-支持模块热替换（HMR）（例如-react-hot-loader）"><a href="#c-此外还有一个重要原因：webpack-支持模块热替换（HMR）（例如-react-hot-loader）" class="headerlink" title="c. 此外还有一个重要原因：webpack 支持模块热替换（HMR）（例如 react-hot-loader）"></a>c. 此外还有一个重要原因：webpack 支持<strong>模块热替换（HMR）</strong>（例如 <a href="https://github.com/gaearon/react-hot-loader" target="_blank" rel="external">react-hot-loader</a>）</h4><p>针对浏览器自动刷新，LiveReload 和 Browser-sync 是两款常用的工具，然而 HMR 更进了一步。我们知道 React 出现的原因之一就是<strong>积累用户在浏览器中的状态</strong>，而 HMR 能够在修改代码保存之后仍然保存之前的状态，就是俗称的「热替换」。</p>
+<h4 id="c-模块热替换（HMR）"><a href="#c-模块热替换（HMR）" class="headerlink" title="c. 模块热替换（HMR）"></a>c. 模块热替换（HMR）</h4><p>此外还有一个重要原因：webpack 支持<strong>模块热替换（HMR）</strong>（例如 <a href="https://github.com/gaearon/react-hot-loader" target="_blank" rel="external">react-hot-loader</a>）  </p>
+<p>针对浏览器自动刷新，LiveReload 和 Browser-sync 是两款常用的工具，然而 HMR 更进了一步。我们知道 React 出现的原因之一就是<strong>积累用户在浏览器中的状态</strong>，而 HMR 能够在修改代码保存之后仍然保存之前的状态，就是俗称的「热替换」。</p>
 <h3 id="1-2-怎么使用-webpack？"><a href="#1-2-怎么使用-webpack？" class="headerlink" title="1.2. 怎么使用 webpack？"></a>1.2. 怎么使用 webpack？</h3><p>了解了为什么（why）之后，接着学习怎么做（how）。</p>
-<h4 id="a-webpack-的安装："><a href="#a-webpack-的安装：" class="headerlink" title="a. webpack 的安装："></a>a. webpack 的安装：</h4><ul>
+<h4 id="a-webpack-的安装"><a href="#a-webpack-的安装" class="headerlink" title="a. webpack 的安装"></a>a. webpack 的安装</h4><ul>
 <li>首先使用 npm 全局安装 webpack：  </li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) -g webpack</div></pre></td></tr></table></figure>
@@ -327,7 +305,11 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 <li>接着局部安装 webpack：  </li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm i(nstall) --save-dev webpack</div></pre></td></tr></table></figure>
-<h4 id="b-webpack-的配置：官方文档、Pete-Hunt"><a href="#b-webpack-的配置：官方文档、Pete-Hunt" class="headerlink" title="b. webpack 的配置：官方文档、Pete Hunt"></a>b. webpack 的配置：<a href="http://webpack.github.io/docs/configuration.html" target="_blank" rel="external">官方文档</a>、<a href="https://github.com/petehunt/webpack-howto" target="_blank" rel="external">Pete Hunt</a></h4><p>webpack 配置的本质就是：一个配置的 Object。</p>
+<h4 id="b-webpack-的配置"><a href="#b-webpack-的配置" class="headerlink" title="b. webpack 的配置"></a>b. webpack 的配置</h4><ul>
+<li><a href="http://webpack.github.io/docs/configuration.html" target="_blank" rel="external">官方文档</a></li>
+<li><a href="https://github.com/petehunt/webpack-howto" target="_blank" rel="external">Pete Hunt</a>  </li>
+</ul>
+<p>webpack 配置的本质就是：一个配置的 Object。</p>
 <p>因此有两种使用方法配置 webpack:</p>
 <ul>
 <li>一种是 Cli（即 Command Line Interface）方法：读取 webpack.config.js 文件；</li>
@@ -345,14 +327,14 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 </blockquote>
 <p>对于 css 和 图片资源同样也有 loader，这样就可以像引用 js 一样在代码中引用，例如：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>(<span class="string">'./bootstrap.css'</span>);</div><div class="line"><span class="built_in">require</span>(<span class="string">'./myapp.less'</span>);</div><div class="line"></div><div class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>);</div><div class="line">img.src = <span class="built_in">require</span>(<span class="string">'./glyph.png'</span>);</div></pre></td></tr></table></figure>
-<p>loader 的编写类似于之前的例子：（!用于链式操作）</p>
+<p>loader 的编写类似于之前的例子：（!用于链式操作，且从右往左执行）</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// webpack.config.js</span></div><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    <span class="attr">entry</span>: <span class="string">'./main.js'</span>,</div><div class="line">    <span class="attr">output</span>: &#123;</div><div class="line">        <span class="attr">path</span>: <span class="string">'./build'</span>, <span class="comment">// This is where images AND js will go</span></div><div class="line">        publicPath: <span class="string">'http://mycdn.com/'</span>, <span class="comment">// This is used to generate URLs to e.g. images</span></div><div class="line">        filename: <span class="string">'bundle.js'</span></div><div class="line">    &#125;,</div><div class="line">    <span class="attr">module</span>: &#123;</div><div class="line">        <span class="attr">loaders</span>: [&#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.less$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'style-loader!css-loader!less-loader'</span></div><div class="line">            &#125;, <span class="comment">// use ! to chain loaders</span></div><div class="line">            &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span></div><div class="line">            &#125;, &#123;</div><div class="line">                <span class="attr">test</span>: <span class="regexp">/\.(png|jpg)$/</span>,</div><div class="line">                <span class="attr">loader</span>: <span class="string">'url-loader?limit=8192'</span></div><div class="line">            &#125; <span class="comment">// inline base64 URLs for &lt;=8k images, direct URLs for the rest</span></div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p><strong>last but not the least:  添加 webpack-dev-server 作为实时代码更新</strong><br>安装完成后只需添加两行代码到 webpack.config.js 中：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    ...</div><div class="line">    entry: [</div><div class="line">        <span class="string">'webpack-dev-server/client?http://0.0.0.0:8080'</span>,</div><div class="line">        <span class="string">'webpack/hot/only-dev-server'</span>,</div><div class="line">        <span class="string">'./app/main.js'</span></div><div class="line">    ],</div><div class="line">    ...</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
 <p>并且在 package.json 中的 scripts 添加一行代码：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"scripts"</span>: &#123;</div><div class="line">        <span class="attr">"dev"</span>: <span class="string">"webpack-dev-server --devtool eval --progress --colors --hot --content-base build"</span></div><div class="line">    &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这样在日常开发中只需要执行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm run dev</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm run dev</div></pre></td></tr></table></figure>
 <p>在浏览器中访问 <code>http://localhost:8080</code> 即可看到编译结果，并且更改代码后能够自动刷新。</p>
 
 
@@ -361,7 +343,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
                 <blockquote>
                     <p>
                         本文地址：
-                        <a href="https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/" target="_blank" rel="external">https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/</a>
+                        <a href="https://buptsteve.github.io/blog/2015/12/29/3.js-webpack/" target="_blank" rel="external">https://buptsteve.github.io/blog/2015/12/29/3.js-webpack/</a>
                     </p>
 
                     <footer>
@@ -376,7 +358,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 <nav class="post-nav">
   
     <div class="waves-block waves-effect prev fl">
-      <a href="/blog/2016/03/16/4. byrs-news notes 1/" id="post-prev" class="post-nav-link">
+      <a href="/blog/2016/03/16/4.byrs-news notes 1/" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">「4」Byrs-News 建站笔记（一）</h4>
       </a>
@@ -385,7 +367,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/blog/2015/11/03/2. centos-server/" id="post-next" class="post-nav-link">
+      <a href="/blog/2015/11/03/2.centos-server/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">「2」如何搭建自己的服务器？</h4>
       </a>
@@ -397,7 +379,7 @@ Dart, CoffeeScript, TypeScript, ES6/7…
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="3. js-webpack" data-title="「3」前端开发利器 webpack" data-url="https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/index.html"></div>
+	<div class="ds-thread" data-thread-key="3.js-webpack" data-title="「3」前端开发利器 webpack" data-url="https://buptsteve.github.io/blog/2015/12/29/3.js-webpack/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -430,52 +412,6 @@ Dart, CoffeeScript, TypeScript, ES6/7…
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
     <span class="icon icon-lg icon-chevron-up"></span>
 </a>
-
-
-    <script>
-        var BLOG_SHARE = {
-            title: "「3」前端开发利器 webpack",
-            pic: "/blog/img/logo.jpg",
-            summary: document.getElementsByName('summary')[0].content,
-            url: "https://buptsteve.github.io/blog/2015/12/29/3. js-webpack/index.html"
-        };
-    </script>
-
-    <div class="global-share" id="global-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
 
 
 

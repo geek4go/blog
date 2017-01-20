@@ -8,8 +8,11 @@
      
          <meta name="theme-color" content="#3F51B5">
      
-     <meta name="summary" content="&lt;h2 id=&quot;零、前言&quot;&gt;&lt;a href=&quot;#零、前言&quot; class=&quot;headerlink&quot; title=&quot;零、前言&quot;&gt;&lt;/a&gt;零、前言&lt;/h2&gt;&lt;p&gt;《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。&lt;/p&gt;
-&lt;h3 id=&quot;主要内容有如下三部分&quot;&gt;&lt;a href=&quot;#主要内容有如下三部分&quot; class=&quot;headerlink&quot; title=&quot;主要内容有如下三部分&quot;&gt;&lt;/a&gt;主要内容有如下三部分&lt;/h3&gt;&lt;ul&gt;
+     <meta name="summary" content="&lt;p&gt;&lt;strong&gt;零、前言&lt;/strong&gt;&lt;br&gt;《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;主要内容有如下三部分&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
 &lt;li&gt;函数表达式的特征&lt;/li&gt;
 &lt;li&gt;使用函数实现递归&lt;/li&gt;
 &lt;li&gt;使用闭包定义私有变量&lt;/li&gt;
@@ -24,24 +27,33 @@
 
 
     <meta name="description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
+
 主要内容有如下三部分
+
+
 函数表达式的特征
 使用函数实现递归
 使用闭包定义私有变量">
 <meta property="og:type" content="article">
 <meta property="og:title" content="「6」JavaScript 函数表达式学习笔记">
-<meta property="og:url" content="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html">
+<meta property="og:url" content="https://buptsteve.github.io/blog/2016/03/23/6.js-function-chapter7/index.html">
 <meta property="og:site_name" content="BuptStEve's Blog">
 <meta property="og:description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
+
 主要内容有如下三部分
+
+
 函数表达式的特征
 使用函数实现递归
 使用闭包定义私有变量">
-<meta property="og:updated_time" content="2016-10-14T02:56:45.394Z">
+<meta property="og:updated_time" content="2016-10-16T17:29:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="「6」JavaScript 函数表达式学习笔记">
 <meta name="twitter:description" content="零、前言《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。
+
 主要内容有如下三部分
+
+
 函数表达式的特征
 使用函数实现递归
 使用闭包定义私有变量">
@@ -67,11 +79,11 @@
 
     <div class="brand-wrap">
         <div class="brand">
-            <a href="/" class="avatar"><img src="/blog/img/logo.jpg"></a>
+            <a href="/blog" class="avatar"><img src="/blog/img/logo.jpg"></a>
 
             <hgroup class="introduce">
                 <h5 class="nickname">Steve Young</h5>
-                <a href="mailto:buptsteve@icloud.com" title="buptsteve@icloud.com" class="mail">buptsteve@icloud.com</a>
+                <a href="mailto:yangzhenyu2016@gmail.com" title="yangzhenyu2016@gmail.com" class="mail">yangzhenyu2016@gmail.com</a>
             </hgroup>
         </div>
     </div>
@@ -133,7 +145,7 @@
         </a>
     </p>
 
-    <p>BuptStEve&#39;s Blog &copy; 2016</p>
+    <p>BuptStEve&#39;s Blog &copy; 2017</p>
     <p>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme
     <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></p>
     <a href="/blog/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-2x icon-rss-square"></i></a>
@@ -166,10 +178,6 @@
         
 
         
-            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-share">
-                <i class="icon icon-lg icon-share-alt"></i>
-            </a>
-        
     </div>
 </header>
 
@@ -192,7 +200,7 @@
 </header>
 
             <div class="container body-wrap">
-                <article id="post-6. js-function-chapter7" class="article article-type-post" itemprop="blogPost">
+                <article id="post-6.js-function-chapter7" class="article article-type-post" itemprop="blogPost">
     <div class="post-meta flex-row">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/JavaScript/">JavaScript</a></li></ul>
@@ -203,47 +211,10 @@
         <aside class="post-widget" id="post-widget">
 
             
-                <div class="post-share" id="post-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
-
-            
 
             
                 <nav class="post-toc-wrap" id="post-toc">
-                    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#零、前言"><span class="post-toc-text">零、前言</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主要内容有如下三部分"><span class="post-toc-text">主要内容有如下三部分</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第7章-函数表达式"><span class="post-toc-text">一、第7章 函数表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-0-函数定义"><span class="post-toc-text">7.0. 函数定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-1-函数声明"><span class="post-toc-text">7.0.1. 函数声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-2-函数表达式"><span class="post-toc-text">7.0.2. 函数表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-递归"><span class="post-toc-text">7.1. 递归</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-闭包"><span class="post-toc-text">7.2. 闭包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么内部的-bar-函数是怎么保存外部-foo-函数的两个参数的呢？"><span class="post-toc-text">那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-普通函数"><span class="post-toc-text">1. 普通函数</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-闭包示例"><span class="post-toc-text">2. 闭包示例</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-1-闭包与变量"><span class="post-toc-text">7.2.1. 闭包与变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-2-关于-this-对象"><span class="post-toc-text">7.2.2. 关于 this 对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-3-内存泄漏"><span class="post-toc-text">7.2.3. 内存泄漏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-模仿块级作用域"><span class="post-toc-text">7.3. 模仿块级作用域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-4-私有变量"><span class="post-toc-text">7.4. 私有变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#那么如果我们需要访问这些私有变量该怎么办呢？"><span class="post-toc-text">那么如果我们需要访问这些私有变量该怎么办呢？</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-1-静态私有变量"><span class="post-toc-text">7.4.1. 静态私有变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-2-模块模式"><span class="post-toc-text">7.4.2. 模块模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-3-增强的模块模式"><span class="post-toc-text">7.4.3. 增强的模块模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-5-小结"><span class="post-toc-text">7.5. 小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-在-JavaScript-中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点："><span class="post-toc-text">1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下："><span class="post-toc-text">2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-使用闭包可以模仿块级作用域："><span class="post-toc-text">3. 使用闭包可以模仿块级作用域：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-闭包还可以用于在对象中创建私有变量："><span class="post-toc-text">4. 闭包还可以用于在对象中创建私有变量：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"><span class="post-toc-text">综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</span></a></li></ol></li></ol></li></ol>
+                    <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一、第7章-函数表达式"><span class="post-toc-text">一、第7章 函数表达式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-0-函数定义"><span class="post-toc-text">7.0. 函数定义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-1-函数声明"><span class="post-toc-text">7.0.1. 函数声明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-0-2-函数表达式"><span class="post-toc-text">7.0.2. 函数表达式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-1-递归"><span class="post-toc-text">7.1. 递归</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-2-闭包"><span class="post-toc-text">7.2. 闭包</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-普通函数"><span class="post-toc-text">1. 普通函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-闭包示例"><span class="post-toc-text">2. 闭包示例</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-1-闭包与变量"><span class="post-toc-text">7.2.1. 闭包与变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-2-关于-this-对象"><span class="post-toc-text">7.2.2. 关于 this 对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-2-3-内存泄漏"><span class="post-toc-text">7.2.3. 内存泄漏</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-3-模仿块级作用域"><span class="post-toc-text">7.3. 模仿块级作用域</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-4-私有变量"><span class="post-toc-text">7.4. 私有变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-1-静态私有变量"><span class="post-toc-text">7.4.1. 静态私有变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-2-模块模式"><span class="post-toc-text">7.4.2. 模块模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-4-3-增强的模块模式"><span class="post-toc-text">7.4.3. 增强的模块模式</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7-5-小结"><span class="post-toc-text">7.5. 小结</span></a></li></ol></li></ol>
                 </nav>
             
         </aside>
@@ -251,8 +222,11 @@
         <div class="post-main">
             <div class="post-content" id="post-content" itemprop="postContent">
 
-            <h2 id="零、前言"><a href="#零、前言" class="headerlink" title="零、前言"></a>零、前言</h2><p>《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。</p>
-<h3 id="主要内容有如下三部分"><a href="#主要内容有如下三部分" class="headerlink" title="主要内容有如下三部分"></a>主要内容有如下三部分</h3><ul>
+            <p><strong>零、前言</strong><br>《JavaScript 高级程序设计（第三版）》第7章 函数表达式，学习笔记整理。</p>
+<blockquote>
+<p>主要内容有如下三部分</p>
+</blockquote>
+<ul>
 <li>函数表达式的特征</li>
 <li>使用函数实现递归</li>
 <li>使用闭包定义私有变量</li>
@@ -268,17 +242,18 @@
 <p>函数声明一个重要特征就是：函数声明提升（function declaration hoisting），简单来说就是 JS 引擎会在执行阶段之前读取函数声明，这就是我们才能够在函数声明之前就调用它的原因。</p>
 </blockquote>
 <h3 id="7-0-2-函数表达式"><a href="#7-0-2-函数表达式" class="headerlink" title="7.0.2. 函数表达式"></a>7.0.2. 函数表达式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 有多种形式，以下为最常见的一种，即创建一个匿名函数并将其赋值给变量 functionName</span></div><div class="line"><span class="keyword">var</span> functionName = <span class="function"><span class="keyword">function</span>(<span class="params">arg0, arg1, arg2</span>) </span>&#123;</div><div class="line">  <span class="comment">// 函数体</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="comment">// 只在 Firefox、Safari、Chrome 和 Opera 有效</span></div><div class="line">alert(functionName.name); <span class="comment">// 空字符串</span></div></pre></td></tr></table></figure>
-<p>当然函数表达式就没有声明提升这种特征了╮(╯▽╰)╭。以下是一个比较常见的坑…</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 千万别这样做！</span></div><div class="line"><span class="comment">// 因为有的浏览器会返回 first 的这个 function，而有的浏览器返回的却是第二个</span></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'first'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span> &#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'second'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"></div><div class="line"><span class="comment">// 相反，这样情况，我们要用函数表达式</span></div><div class="line"><span class="keyword">var</span> foo;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'first'</span>;</div><div class="line">  &#125;;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'second'</span>;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
+<p>当然函数表达式就没有声明提升这种特征了。以下是一个比较常见的坑…</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 千万别这样做！</span></div><div class="line"><span class="comment">// 因为有的浏览器会返回 first 的这个 function，而有的浏览器返回的却是第二个</span></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'first'</span>;</div><div class="line">  &#125;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'second'</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">foo();</div><div class="line"></div><div class="line"><span class="comment">// 相反，这样情况，我们要用函数表达式</span></div><div class="line"><span class="keyword">var</span> foo;</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'first'</span>;</div><div class="line">  &#125;;</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">  foo = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">'second'</span>;</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">foo();</div></pre></td></tr></table></figure>
 <h2 id="7-1-递归"><a href="#7-1-递归" class="headerlink" title="7.1. 递归"></a>7.1. 递归</h2><blockquote>
 <p>先说个段子：要想理解递归，首先要理解…递归。</p>
 </blockquote>
 <p>说正经的，递归就是函数自己调用自己。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (num &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="comment">// 递归结束条件</span></div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> num * factorial(num<span class="number">-1</span>); <span class="comment">// 通过在全局 VO 中，找到自身函数的指针后调用自身</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> anotherFactorial = factorial;</div><div class="line">factorial = <span class="literal">null</span>;</div><div class="line">alert(anotherFactorial(<span class="number">4</span>)); <span class="comment">// 报错！因为修改了全局 VO 中 factorial 指针的指向（null）</span></div></pre></td></tr></table></figure>
-<p>这么写主要问题就是递归函数与自身的函数名耦合，一旦修改了原本的函数名，则会导致错误。这时可以利用 <code>arguments.callee</code> 指针来成功寻找到正在执行的函数。</p>
-<p>但是，接下来又有一个坑：arguments 在严格模式下无法使用。</p>
-<p>不过，可以使用命名函数表达式来解决：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> factorial = <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (num &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="comment">// 递归结束条件</span></div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> num * f(num<span class="number">-1</span>); <span class="comment">// 函数名 f 只在内部作用域里有效</span></div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">typeof</span> f; <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">factorial</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">  <span class="comment">// 递归结束条件</span></div><div class="line">  <span class="keyword">if</span> (num &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">  <span class="comment">// 通过在全局 VO 中，找到自身函数的指针后调用自身</span></div><div class="line">  <span class="keyword">return</span> num * factorial(num<span class="number">-1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> anotherFactorial = factorial;</div><div class="line">factorial = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="comment">// 报错！因为修改了全局 VO 中 factorial 指针的指向（null）</span></div><div class="line">alert(anotherFactorial(<span class="number">4</span>));</div></pre></td></tr></table></figure>
+<p>这么写主要问题就是递归函数与自身的函数名耦合，一旦修改了原本的函数名，则会导致错误。</p>
+<p>这时可以利用 <code>arguments.callee</code> 指针来成功寻找到正在执行的函数。</p>
+<p>接下来又有一个坑：arguments 在严格模式下无法使用。</p>
+<p>不过我们可以使用命名函数表达式来完美解决：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> factorial = <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">num</span>) </span>&#123;</div><div class="line">  <span class="comment">// 递归结束条件</span></div><div class="line">  <span class="keyword">if</span> (num &lt;= <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">  <span class="comment">// 函数名 f 只在内部作用域里有效</span></div><div class="line">  <span class="keyword">return</span> num * f(num<span class="number">-1</span>);</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">typeof</span> f; <span class="comment">// undefined</span></div></pre></td></tr></table></figure>
 <h2 id="7-2-闭包"><a href="#7-2-闭包" class="headerlink" title="7.2. 闭包"></a>7.2. 闭包</h2><blockquote>
 <p>先下定义：闭包是指【有权】访问（另一个函数作用域）中的「变量」的「函数」。</p>
 </blockquote>
@@ -287,9 +262,11 @@
 <li>能力就是有权访问变量</li>
 <li>范围在另一个函数作用域内</li>
 </ul>
-<p>我们日常在使用 JavaScript 中，在外部函数中定义的内部函数能够访问外部函数中的变量。所以，最常见的闭包方式就是在一个函数内部创建并返回另一个函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg0, arg1</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> arg0 + arg1;   <span class="comment">// 内部的 bar 函数能够访问外部函数 foo 的 arg0 和 arg1 变量。</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> test = foo(<span class="string">'a'</span>, <span class="string">'b'</span>); <span class="comment">// test 是一个指针，指向返回的 bar 函数</span></div><div class="line">test();                   <span class="comment">// ab，调用闭包后，得到 arg0 + arg1 的值</span></div><div class="line"><span class="keyword">typeof</span> bar;               <span class="comment">// undefined，当然返回的是一个匿名函数</span></div></pre></td></tr></table></figure>
-<h4 id="那么内部的-bar-函数是怎么保存外部-foo-函数的两个参数的呢？"><a href="#那么内部的-bar-函数是怎么保存外部-foo-函数的两个参数的呢？" class="headerlink" title="那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？"></a>那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？</h4><ul>
+<p>我们日常在使用 JavaScript 中，在外部函数中定义的内部函数能够访问外部函数中的变量。</p>
+<p>所以，最常见的闭包方式就是在一个函数内部创建并返回另一个函数。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">arg0, arg1</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="comment">// 内部的 bar 函数能够访问外部函数 foo 的 arg0 和 arg1 变量。</span></div><div class="line">    <span class="keyword">return</span> arg0 + arg1;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> test = foo(<span class="string">'a'</span>, <span class="string">'b'</span>); <span class="comment">// test 是一个指针，指向返回的 bar 函数</span></div><div class="line">test();                   <span class="comment">// ab，调用闭包后，得到 arg0 + arg1 的值</span></div><div class="line"><span class="keyword">typeof</span> bar;               <span class="comment">// undefined，当然返回的是一个匿名函数</span></div></pre></td></tr></table></figure>
+<p><strong>那么内部的 bar 函数是怎么保存外部 foo 函数的两个参数的呢？</strong></p>
+<ul>
 <li>首先在浏览器端的 JavaScript 代码，有一个全局的执行环境（Execution Context）即 window 对象。</li>
 <li>每个执行环境都有一个对应的变量对象（Variable Object）：定义的所有变量和函数都保存其中。</li>
 <li>当某个函数被调用时，会创建一个执行环境（EC）及相应的作用域链（Scope Chain）（其实是被推入一个环境栈中，执行之后栈将之弹出）。</li>
@@ -299,8 +276,8 @@
 <li>因此在一个函数中解析标识符的过程，类似于上一篇中提到的原型链查找。也是沿着 SC 一级一级地往上找。如果直到全局 VO 还没找到，就会报错。</li>
 </ul>
 <p>所以接下来举几个栗子：</p>
-<h5 id="1-普通函数"><a href="#1-普通函数" class="headerlink" title="1. 普通函数"></a>1. 普通函数</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">  &#125; <span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> result = compare(<span class="number">5</span>, <span class="number">10</span>);</div></pre></td></tr></table></figure>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">      ______________________________________________________________</div><div class="line">      |<span class="string">                                                             </span>|</div><div class="line">      V                                     _____________________   |<span class="string">           _____________________</span></div><div class="line"> _________________                    |<span class="string">--&gt; </span>|<span class="string">       global VO     </span>|<span class="string">  </span>|<span class="string">     </span>|<span class="string">---&gt;</span>|<span class="string">     compare AO      </span>|</div><div class="line">|<span class="string">   compare EC    </span>|<span class="string">                   </span>|<span class="string">    </span>|<span class="string">---------------------</span>|<span class="string">  </span>|<span class="string">     </span>|<span class="string">    </span>|<span class="string">---------------------</span>|</div><div class="line">|<span class="string">-------—---------</span>|<span class="string">       _______     </span>|<span class="string">    </span>|<span class="string"> compare </span>|<span class="string">      *----</span>|<span class="string">--</span>|<span class="string">     </span>|<span class="string">    </span>|<span class="string"> arguments </span>|<span class="string"> [5, 10] </span>|</div><div class="line">|<span class="string"> Scope Chain </span>|<span class="string"> *-</span>|<span class="string">----&gt; </span>|<span class="string">  SC   </span>|<span class="string">    </span>|<span class="string">    </span>|<span class="string">---------------------</span>|<span class="string">        </span>|<span class="string">    </span>|<span class="string">---------------------</span>|</div><div class="line">|<span class="string">-----------------</span>|<span class="string">      </span>|<span class="string">-------</span>|<span class="string">    </span>|<span class="string">    </span>|<span class="string"> result  </span>|<span class="string"> undefined </span>|<span class="string">        </span>|<span class="string">    </span>|<span class="string"> value1    </span>|<span class="string">    5    </span>|</div><div class="line">                         |<span class="string"> 1 </span>|<span class="string"> *-</span>|<span class="string">----</span>|<span class="string">    </span>|<span class="string">---------------------</span>|<span class="string">        </span>|<span class="string">    </span>|<span class="string">---------------------</span>|</div><div class="line">                         |<span class="string">-------</span>|<span class="string">                                        </span>|<span class="string">    </span>|<span class="string"> value2    </span>|<span class="string">   10    </span>|</div><div class="line">                         |<span class="string"> 0 </span>|<span class="string"> *-</span>|<span class="string">----------------------------------------</span>|<span class="string">    </span>|<span class="string">---------------------</span>|</div><div class="line">                         |<span class="string">-------</span>|</div><div class="line"></div><div class="line">                                           by 灵魂画师...(累死我了)</div></pre></td></tr></table></figure>
+<h3 id="1-普通函数"><a href="#1-普通函数" class="headerlink" title="1. 普通函数"></a>1. 普通函数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">compare</span>(<span class="params">value1, value2</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (value1 &lt; value2) <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">  <span class="keyword">if</span> (value1 &gt; value2) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> result = compare(<span class="number">5</span>, <span class="number">10</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">      ______________________________________________________________</div><div class="line">      |                                                             |</div><div class="line">      V                                     _____________________   |           _____________________</div><div class="line"> _________________                    |--&gt; |       global VO     |  |     |---&gt;|     compare AO      |</div><div class="line">|   compare EC    |                   |    |---------------------|  |     |    |---------------------|</div><div class="line">|-------—---------|       _______     |    | compare |      *----|--|     |    | arguments | [5, 10] |</div><div class="line">| Scope Chain | *-|----&gt; |  SC   |    |    |---------------------|        |    |---------------------|</div><div class="line">|-----------------|      |-------|    |    | result  | undefined |        |    | value1    |    5    |</div><div class="line">                         | 1 | *-|----|    |---------------------|        |    |---------------------|</div><div class="line">                         |-------|                                        |    | value2    |   10    |</div><div class="line">                         | 0 | *-|----------------------------------------|    |---------------------|</div><div class="line">                         |-------|</div><div class="line"></div><div class="line">                                           by 灵魂画师...(累死我了)</div></pre></td></tr></table></figure>
 <ul>
 <li>在创建 compare 函数时，就已经创建一个预先包含全局 VO 的作用域链（保存在内部的 [[Scope]] 属性中）。</li>
 <li>在执行 compare 函数时，就创建 EC，然后复制并构建 [[Scope]] 属性中的作用域链 SC</li>
@@ -308,8 +285,8 @@
 <li>所以在函数中访问一个变量时，会从作用域顶端（就是 compare AO）开始找起。</li>
 <li>所以一般一个函数执行完毕后，因为 AO 被销毁，所以在函数外部无法访问到函数内部的变量。</li>
 </ul>
-<h5 id="2-闭包示例"><a href="#2-闭包示例" class="headerlink" title="2. 闭包示例"></a>2. 闭包示例</h5><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCompFunc</span>(<span class="params">propName</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value1 = obj1[propName];</div><div class="line">    <span class="keyword">var</span> value2 = obj2[propName];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> compare = createCompFunc(<span class="string">"name"</span>);                   <span class="comment">// 创建函数</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> result = compare(&#123;<span class="attr">name</span>: <span class="string">"steve"</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">"young"</span>&#125;); <span class="comment">// 调用函数</span></div><div class="line"></div><div class="line">compare = <span class="literal">null</span>;                                         <span class="comment">// 解除对匿名函数的引用（释放内存）</span></div></pre></td></tr></table></figure>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">          __________________________________________________________________</div><div class="line">          |<span class="string">                                         _____________________   </span>|</div><div class="line">          |<span class="string">                                </span>|<span class="string">-----&gt; </span>|<span class="string">      global VO      </span>|<span class="string">  </span>|</div><div class="line">          |<span class="string">                                </span>|<span class="string">       </span>|<span class="string">---------------------</span>|<span class="string">  </span>|</div><div class="line">          |<span class="string">                                </span>|<span class="string">       </span>|<span class="string"> createCompFunc </span>|<span class="string"> *--</span>|<span class="string">--</span>|</div><div class="line">          |<span class="string">                                </span>|<span class="string">       </span>|<span class="string">---------------------</span>|</div><div class="line">          V                                |<span class="string">       </span>|<span class="string"> result  </span>|<span class="string"> undefined </span>|</div><div class="line"> ___________________              _______  |<span class="string">       </span>|<span class="string">---------------------</span>|</div><div class="line">|<span class="string"> createCompFunc EC </span>|<span class="string">      </span>|<span class="string">---&gt; </span>|<span class="string">  SC1  </span>|<span class="string"> </span>|<span class="string">        ______________________</span></div><div class="line">|<span class="string">-------—-----------</span>|<span class="string">      </span>|<span class="string">     </span>|<span class="string">-------</span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">---&gt; </span>|<span class="string">  createCompFunc AO   </span>|</div><div class="line">|<span class="string"> Scope Chain </span>|<span class="string">  *--</span>|<span class="string">------</span>|<span class="string">     </span>|<span class="string"> 1 </span>|<span class="string"> *-</span>|<span class="string">-</span>|<span class="string"> </span>|<span class="string">     </span>|<span class="string">----------------------</span>|</div><div class="line">|<span class="string">-------------------</span>|<span class="string">            </span>|<span class="string">-------</span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">     </span>|<span class="string"> arguments </span>|<span class="string"> ["name"] </span>|</div><div class="line">                                 |<span class="string"> 0 </span>|<span class="string"> *-</span>|<span class="string">-(-</span>|<span class="string">     </span>|<span class="string">----------------------</span>|</div><div class="line"> ________________________        |<span class="string">-------</span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">     </span>|<span class="string"> propName  </span>|<span class="string">  "name"  </span>|</div><div class="line">|<span class="string">  anoymous function EC  </span>|<span class="string">                 </span>|<span class="string"> </span>|<span class="string">     </span>|<span class="string">----------------------</span>|</div><div class="line">|<span class="string">-------—----------------</span>|<span class="string">        _______  </span>|<span class="string"> </span>|<span class="string">      _______________________________</span></div><div class="line">|<span class="string"> Scope Chain </span>|<span class="string">    *-----</span>|<span class="string">-----&gt; </span>|<span class="string">  SC2  </span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">-&gt; </span>|<span class="string">      anoymous function AO     </span>|</div><div class="line">|<span class="string">------------------------</span>|<span class="string">       </span>|<span class="string">-------</span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string">-------------------------------</span>|</div><div class="line">                                 |<span class="string"> 2 </span>|<span class="string"> *-</span>|<span class="string">-</span>|<span class="string"> </span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string"> arguments </span>|<span class="string"> [&#123;name: "steve"&#125;, </span>|</div><div class="line">                                 |<span class="string">-------</span>|<span class="string">   </span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string">           </span>|<span class="string">  &#123;name: "young"&#125;] </span>|</div><div class="line">                                 |<span class="string"> 1 </span>|<span class="string"> *-</span>|<span class="string">---</span>|<span class="string"> </span>|<span class="string">   </span>|<span class="string">-------------------------------</span>|</div><div class="line">                                 |<span class="string">-------</span>|<span class="string">     </span>|<span class="string">   </span>|<span class="string">   obj1    </span>|<span class="string">  &#123;name: "steve"&#125;  </span>|</div><div class="line">                                 |<span class="string"> 0 </span>|<span class="string"> *-</span>|<span class="string">-----</span>|<span class="string">   </span>|<span class="string">-------------------------------</span>|</div><div class="line">                                 |<span class="string">-------</span>|<span class="string">         </span>|<span class="string">   obj2    </span>|<span class="string">  &#123;name: "young"&#125;  </span>|</div><div class="line">                                                   |<span class="string">-------------------------------</span>|</div><div class="line">                                 by 灵魂画师...(累死我了)</div></pre></td></tr></table></figure>
+<h4 id="2-闭包示例"><a href="#2-闭包示例" class="headerlink" title="2. 闭包示例"></a>2. 闭包示例</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">createCompFunc</span>(<span class="params">propName</span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">obj1, obj2</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> value1 = obj1[propName];</div><div class="line">    <span class="keyword">var</span> value2 = obj2[propName];</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (value1 &lt; value2) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (value1 &gt; value2) &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> compare = createCompFunc(<span class="string">"name"</span>);                   <span class="comment">// 创建函数</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> result = compare(&#123;<span class="attr">name</span>: <span class="string">"steve"</span>&#125;, &#123;<span class="attr">name</span>: <span class="string">"young"</span>&#125;); <span class="comment">// 调用函数</span></div><div class="line"></div><div class="line">compare = <span class="literal">null</span>;                                         <span class="comment">// 解除对匿名函数的引用（释放内存）</span></div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">          __________________________________________________________________</div><div class="line">          |                                         _____________________   |</div><div class="line">          |                                |-----&gt; |      global VO      |  |</div><div class="line">          |                                |       |---------------------|  |</div><div class="line">          |                                |       | createCompFunc | *--|--|</div><div class="line">          |                                |       |---------------------|</div><div class="line">          V                                |       | result  | undefined |</div><div class="line"> ___________________              _______  |       |---------------------|</div><div class="line">| createCompFunc EC |      |---&gt; |  SC1  | |        ______________________</div><div class="line">|-------—-----------|      |     |-------| | |---&gt; |  createCompFunc AO   |</div><div class="line">| Scope Chain |  *--|------|     | 1 | *-|-| |     |----------------------|</div><div class="line">|-------------------|            |-------| | |     | arguments | [&quot;name&quot;] |</div><div class="line">                                 | 0 | *-|-(-|     |----------------------|</div><div class="line"> ________________________        |-------| | |     | propName  |  &quot;name&quot;  |</div><div class="line">|  anoymous function EC  |                 | |     |----------------------|</div><div class="line">|-------—----------------|        _______  | |      _______________________________</div><div class="line">| Scope Chain |    *-----|-----&gt; |  SC2  | | | |-&gt; |      anoymous function AO     |</div><div class="line">|------------------------|       |-------| | | |   |-------------------------------|</div><div class="line">                                 | 2 | *-|-| | |   | arguments | [&#123;name: &quot;steve&quot;&#125;, |</div><div class="line">                                 |-------|   | |   |           |  &#123;name: &quot;young&quot;&#125;] |</div><div class="line">                                 | 1 | *-|---| |   |-------------------------------|</div><div class="line">                                 |-------|     |   |   obj1    |  &#123;name: &quot;steve&quot;&#125;  |</div><div class="line">                                 | 0 | *-|-----|   |-------------------------------|</div><div class="line">                                 |-------|         |   obj2    |  &#123;name: &quot;young&quot;&#125;  |</div><div class="line">                                                   |-------------------------------|</div><div class="line">                                 by 灵魂画师...(累死我了)</div></pre></td></tr></table></figure>
 <ul>
 <li>如图所示，首先看全局变量对象（global VO），其中有一个指针指向 createCompFunc 函数，还有一个声明提升后还未计算完毕的 result 等变量。</li>
 <li>首先执行外部的 createCompFunc 函数，创建了它的 EC，其中有一个作用域链指针指向它的作用域链 SC1。</li>
@@ -358,7 +335,7 @@
 <li>局部变量</li>
 <li>内部定义的其他函数</li>
 </ul>
-<h4 id="那么如果我们需要访问这些私有变量该怎么办呢？"><a href="#那么如果我们需要访问这些私有变量该怎么办呢？" class="headerlink" title="那么如果我们需要访问这些私有变量该怎么办呢？"></a>那么如果我们需要访问这些私有变量该怎么办呢？</h4><p>在此就要引入一个概念：特权方法（privileged method）有权访问私有变量和私有函数的公有方法。</p>
+<p><strong>那么如果我们需要访问这些私有变量该怎么办呢？</strong><br>在此就要引入一个概念：特权方法（privileged method）有权访问私有变量和私有函数的公有方法。</p>
 <blockquote>
 <p>这个概念是不是和闭包炒鸡像！？</p>
 </blockquote>
@@ -385,35 +362,40 @@
 <p>模块模式的应用场景主要是在需要对单例进行某些初始化，同时又需要维护其私有变量时是非常有用的。</p>
 <h3 id="7-4-3-增强的模块模式"><a href="#7-4-3-增强的模块模式" class="headerlink" title="7.4.3. 增强的模块模式"></a>7.4.3. 增强的模块模式</h3><p>应用场景：单例必须是某种类型的实例，同时还必须添加某些属性和（或）方法对其进行加强的情况。</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> singleton = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="comment">// 私有变量和私有函数</span></div><div class="line">  <span class="keyword">var</span> privateVar = <span class="number">10</span>;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">privateFunc</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="comment">// 创建对象</span></div><div class="line">  <span class="keyword">var</span> object = <span class="keyword">new</span> CustomType();</div><div class="line"></div><div class="line">  <span class="comment">// 添加公有/特权属性和方法</span></div><div class="line">  object.publicProperty = <span class="literal">true</span>;</div><div class="line"></div><div class="line">  object.publicMethod = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    privateVar++;</div><div class="line">    <span class="keyword">return</span> privateFunc();</div><div class="line">  &#125;;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> object;</div><div class="line">&#125;();</div></pre></td></tr></table></figure>
-<h2 id="7-5-小结"><a href="#7-5-小结" class="headerlink" title="7.5. 小结"></a>7.5. 小结</h2><h4 id="1-在-JavaScript-中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点："><a href="#1-在-JavaScript-中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：" class="headerlink" title="1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点："></a>1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：</h4><ul>
+<h2 id="7-5-小结"><a href="#7-5-小结" class="headerlink" title="7.5. 小结"></a>7.5. 小结</h2><p><strong>1. 在 JavaScript 中，使用函数表达式可以无须对函数命名，从而实现动态编程，还有强大的匿名函数，以下是函数表达式的特点：</strong></p>
+<ul>
 <li>函数声明必须要有名字，还会声明提升，而函数表达式不需要，没有名字的函数表达式又叫匿名函数</li>
 <li>在递归函数中使用函数名调用自身可能会出现问题，如函数名发生了变化。</li>
 <li>在递归函数中要掌握调用函数自身的技巧，如 arguments.callee 等。</li>
 </ul>
-<h4 id="2-闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下："><a href="#2-闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：" class="headerlink" title="2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下："></a>2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：</h4><ul>
+<p><strong>2. 闭包：在外部函数中又定义了一个内部函数，这个内部函数有权访问外部函数的所有变量，原理如下：</strong></p>
+<ul>
 <li>在 JavaScript 引擎执行时，闭包的 SC 包含了自己的 AO、外部函数的 AO 还有全局 VO。</li>
 <li>通常，函数的作用域和所有变量会在函数执行后被销毁。</li>
 <li>但是，当函数返回了一个闭包时，外部函数的 AO 会一直保存在内存中，直到解除闭包的引用，如设为 null。</li>
 </ul>
-<h4 id="3-使用闭包可以模仿块级作用域："><a href="#3-使用闭包可以模仿块级作用域：" class="headerlink" title="3. 使用闭包可以模仿块级作用域："></a>3. 使用闭包可以模仿块级作用域：</h4><ul>
+<p><strong>3. 使用闭包可以模仿块级作用域：</strong></p>
+<ul>
 <li>立即执行函数既可以执行其中的代码，又不会在内存中留下对该函数的引用。</li>
 <li>所以函数内部的所有变量都会被立即销毁，除非将某些变量赋值给外部作用域中的变量。</li>
 </ul>
-<h4 id="4-闭包还可以用于在对象中创建私有变量："><a href="#4-闭包还可以用于在对象中创建私有变量：" class="headerlink" title="4. 闭包还可以用于在对象中创建私有变量："></a>4. 闭包还可以用于在对象中创建私有变量：</h4><ul>
+<p><strong>4. 闭包还可以用于在对象中创建私有变量：</strong></p>
+<ul>
 <li>函数内部的变量、方法，外部无法访问。</li>
 <li>但通过闭包可以实现公有方法，即访问在包含作用域中定义的变量。</li>
 <li>有权访问私有变量的公有方法叫做特权方法。</li>
 <li>可以使用构造函数模式、原型模式来实现自定义类型的特权方法。</li>
 <li>也可以使用模块模式、增强模块模式来实现单例的特权方法。</li>
 </ul>
-<h4 id="综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"><a href="#综上：JavaScript-中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。" class="headerlink" title="综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。"></a>综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</h4>
+<p><strong>综上：JavaScript 中函数表达式和闭包都是很给力的特性。不过，因为创建闭包必须维护额外的作用域，所以过度使用可能会占用大量内存。</strong></p>
+
 
             
 
                 <blockquote>
                     <p>
                         本文地址：
-                        <a href="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/" target="_blank" rel="external">https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/</a>
+                        <a href="https://buptsteve.github.io/blog/2016/03/23/6.js-function-chapter7/" target="_blank" rel="external">https://buptsteve.github.io/blog/2016/03/23/6.js-function-chapter7/</a>
                     </p>
 
                     <footer>
@@ -427,10 +409,17 @@
             
 <nav class="post-nav">
   
+    <div class="waves-block waves-effect prev fl">
+      <a href="/blog/2016/10/25/7.redux-basis/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">「7」Redux 基础 - react 全家桶学习笔记（一）</h4>
+      </a>
+    </div>
+  
 
   
     <div class="waves-block waves-effect next fr">
-      <a href="/blog/2016/03/17/5. js-oo-chapter6/" id="post-next" class="post-nav-link">
+      <a href="/blog/2016/03/17/5.js-oo-chapter6/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">「5」JavaScript 面向对象深入理解</h4>
       </a>
@@ -442,7 +431,7 @@
             
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="6. js-function-chapter7" data-title="「6」JavaScript 函数表达式学习笔记" data-url="https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"></div>
+	<div class="ds-thread" data-thread-key="6.js-function-chapter7" data-title="「6」JavaScript 函数表达式学习笔记" data-url="https://buptsteve.github.io/blog/2016/03/23/6.js-function-chapter7/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -475,52 +464,6 @@
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light">
     <span class="icon icon-lg icon-chevron-up"></span>
 </a>
-
-
-    <script>
-        var BLOG_SHARE = {
-            title: "「6」JavaScript 函数表达式学习笔记",
-            pic: "/blog/img/logo.jpg",
-            summary: document.getElementsByName('summary')[0].content,
-            url: "https://buptsteve.github.io/blog/2016/03/23/6. js-function-chapter7/index.html"
-        };
-    </script>
-
-    <div class="global-share" id="global-share">
-    <div class="tit">分享到：</div>
-    <ul class="reset share-icons">
-      <li>
-        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
-          <i class="icon icon-weibo"></i>
-        </a>
-      </li>
-      <li>
-        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
-          <i class="icon icon-weixin"></i>
-        </a>
-      </li>
-      <li>
-        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
-          <i class="icon icon-qq"></i>
-        </a>
-      </li>
-      <li>
-        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
-          <i class="icon icon-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
-          <i class="icon icon-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
-          豆
-        </a>
-      </li>
-    </ul>
- </div>
 
 
 
